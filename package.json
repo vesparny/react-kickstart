@@ -12,11 +12,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/nodemon index.js",
-    "build": "rm -rf dist && NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack.config.js --progress --profile --colors",
+    "test-cov": "`npm bin`/istanbul cover `npm bin`/_mocha -- --compilers js:babel/register --recursive",
+    "start": "`npm bin`/nodemon index.js",
+    "build": "rm -rf dist && NODE_ENV=production `npm bin`/webpack --config ./webpack.config.js --progress --profile --colors",
     "gh-pages": "./scripts/publish-gh-pages",
-    "eslint": "./node_modules/.bin/eslint .",
-    "jscs": "./node_modules/.bin/jscs ."
+    "eslint": "`npm bin`/eslint .",
+    "jscs": "`npm bin`/jscs ."
   },
   "dependencies": {
     "basscss": "^6.1.6",
@@ -29,13 +30,16 @@
     "babel-core": "^5.5.8",
     "babel-eslint": "^3.1.17",
     "babel-loader": "^5.1.4",
+    "chai": "^3.0.0",
     "css-loader": "^0.15.1",
     "eslint": "^0.23.0",
     "eslint-plugin-react": "^2.5.2",
     "esprima-fb": "^15001.1.0-dev-harmony-fb",
     "extract-text-webpack-plugin": "^0.8.2",
+    "istanbul": "^0.3.15",
     "jscs": "^1.13.1",
     "json-loader": "^0.5.2",
+    "mocha": "^2.2.5",
     "node-libs-browser": "^0.5.2",
     "nodemon": "^1.3.7",
     "react-hot-loader": "^1.2.7",

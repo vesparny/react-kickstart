@@ -17,9 +17,6 @@ module.exports = {
     filename: '[name].js',
     publicPath: '/dist/'
   },
-  resolve: {
-    extensions: ['', '.js', 'json']
-  },
   module: {
     loaders: [{
       test: /\.js?$/,
