@@ -13,7 +13,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/nodemon index.js",
-    "build": "NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack.config.js --progress --profile --colors",
+    "build": "rm -rf dist && NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack.config.js --progress --profile --colors",
+    "gh-pages": "./scripts/publish-gh-pages",
     "eslint": "./node_modules/.bin/eslint .",
     "jscs": "./node_modules/.bin/jscs ."
   },
