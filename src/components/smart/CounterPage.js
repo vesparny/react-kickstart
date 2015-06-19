@@ -18,10 +18,10 @@ export default class Home extends Component {
 
   render() {
     return (
-        <Counter
-          count={this.state.counter}
-          handleClick={::this.increment}
-        />
+      <Counter
+        count={this.state.counter}
+        handleClick={::this.increment}
+      />
     );
   }
 }
