@@ -26,6 +26,10 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'react-hot!babel'
     },{
+      test: /\.json?$/,
+      exclude: /node_modules/,
+      loader: 'json'
+    },{
       test: /\.styl|\.css$/,
       loader: ExtractTextPlugin.extract("css-loader!stylus-loader")
     }]

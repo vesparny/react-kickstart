@@ -1,11 +1,18 @@
-import React, { Component } from 'react';
-import Home from './smart/Home';
+import React from 'react';
+import { RouteHandler } from 'react-router';
+import Header from './dumb/Header';
 
-export default class App extends Component {
+
+export default class App {
 
   render() {
+    const { pathname } = this.props;
+
     return (
-        <Home />
+      <div>
+        <Header />
+        <RouteHandler {...this.props} key={pathname} />
+      </div>
     );
   }
 }

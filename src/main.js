@@ -1,8 +1,29 @@
 // load global styles before everything else
-import 'normalize.css';
+import 'basscss/css/basscss.css';
 
 import React from 'react';
-import App from './components/App';
+import Router from 'react-router';
+import routes from './routes';
+import attachFastClick from 'fastclick';
 
-React.render(<App />,
-  document.getElementById('root'));
+// Remove 300ms tap delay on mobile devices
+attachFastClick.attach(document.body);
+
+// Expose globally
+window.React = React;
+
+// Remove 300ms tap delay on mobile devices
+attachFastClick.attach(document.body);
+
+// Expose globally
+window.React = React;
+
+const router = Router.create({
+  routes: routes,
+  location: Router.HistoryLocation
+});
+
+router.run((Handler, state) => {
+  React.render(<Handler {...state} />,
+    document.getElementById('root'));
+});
