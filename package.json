@@ -11,8 +11,8 @@
   "homepage": "https://github.com/vesparny/react-kickstart",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test `npm bin`/mocha --compilers js:babel/register --recursive",
-    "test-cov": "`npm bin`/istanbul cover `npm bin`/_mocha -- --compilers js:babel/register --recursive",
+    "test": "NODE_ENV=test `npm bin`/mocha --require ./test/test-init --compilers js:babel/register --recursive --reporter spec",
+    "test-cov": "NODE_ENV=test `npm bin`/istanbul cover `npm bin`/_mocha -- --require ./test/test-init --compilers js:babel/register --recursive",
     "start": "`npm bin`/nodemon index.js",
     "build": "rm -rf dist && NODE_ENV=production `npm bin`/webpack --config ./webpack.config.js --progress --profile --colors",
     "gh-pages": "./scripts/publish-gh-pages",
