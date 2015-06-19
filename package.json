@@ -11,7 +11,7 @@
   "homepage": "https://github.com/vesparny/react-kickstart",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "NODE_ENV=test `npm bin`/mocha --compilers js:babel/register --recursive",
     "test-cov": "`npm bin`/istanbul cover `npm bin`/_mocha -- --compilers js:babel/register --recursive",
     "start": "`npm bin`/nodemon index.js",
     "build": "rm -rf dist && NODE_ENV=production `npm bin`/webpack --config ./webpack.config.js --progress --profile --colors",
