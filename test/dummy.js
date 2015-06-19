@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import routes from '../src/routes';
 
 describe('dummy', () => {
