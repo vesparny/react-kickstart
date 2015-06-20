@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Counter from './Counter';
 import {
     version,
     dependencies,
     homepage,
     devDependencies
-  } from '../../../package.json';
+  } from '../../package.json';
 
-export default class Home {
+export default class Home extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      counter: 0
+    };
+  }
+
+  increment(){
+    this.setState({
+      counter: this.state.counter+=1
+    });
+  }
 
   render() {
     const deps = Object.keys(dependencies)
@@ -24,6 +38,10 @@ export default class Home {
           <a href={homepage}>GitHub</a>
           <br />
           <a href="https://twitter.com/vesparny">@vesparny</a>
+          <Counter
+            count={this.state.counter}
+            handleClick={::this.increment}
+          />
           <h3>Powered by:</h3>
           <div className="sm-col sm-col-6 px2">
             <h4> DEPENDENCIES:</h4>

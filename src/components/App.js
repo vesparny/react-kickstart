@@ -1,6 +1,5 @@
 import React from 'react';
 import { RouteHandler } from 'react-router';
-import Header from './dumb/Header';
 
 
 export default class App {
@@ -10,7 +9,6 @@ export default class App {
 
     return (
       <div>
-        <Header />
         <RouteHandler {...this.props} key={pathname} />
       </div>
     );
