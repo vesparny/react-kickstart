@@ -1,5 +1,5 @@
 import React from 'react';
-import './Counter.styl';
+import './Counter.css';
 
 // as long as you don't use setState() or forceUpdate,
 // there is no need of extend React.Component

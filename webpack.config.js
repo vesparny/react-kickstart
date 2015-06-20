@@ -28,7 +28,7 @@ module.exports = {
       loader: 'json'
     },{
       test: /\.styl|\.css$/,
-      loader: ExtractTextPlugin.extract("css-loader!stylus-loader")
+      loader: ExtractTextPlugin.extract("css-loader")
     }]
   },
   plugins: [
