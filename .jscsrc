@@ -1,6 +1,5 @@
 {
-  "esprima": "esprima-fb",
-  "fileExtensions": [".js", ".jsx"],
+  "esprima": "./node_modules/babel-jscs",
   "esnext": true,
   "requireCurlyBraces": ["else", "for", "while", "do", "try", "catch", "case", "default"],
   "requireSpaceAfterKeywords": [
@@ -76,5 +75,16 @@
   "requireSpaceAfterLineComment": true,
   "validateParameterSeparator": ", ",
   "disallowNewlineBeforeBlockStatements": true,
-  "excludeFiles": ["node_modules/**", "public/build"]
+  "requirePaddingNewlinesBeforeKeywords": [
+    "do",
+    "for",
+    "if",
+    "switch",
+    "try",
+    "void",
+    "while",
+    "with",
+    "return"
+   ],
+  "excludeFiles": ["node_modules/**", "dist", "coverage"]
 }

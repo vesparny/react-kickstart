@@ -16,9 +16,9 @@ export default class Home extends Component {
     };
   }
 
-  increment(){
+  increment() {
     this.setState({
-      counter: this.state.counter+=1
+      counter: this.state.counter += 1
     });
   }
 

@@ -1,8 +1,8 @@
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config.js');
+import webpack from 'webpack';
+import WebpackDevServer from 'webpack-dev-server';
+import config from './webpack.config.js';
 
-var serverOptions = {
+const serverOptions = {
   publicPath: config.output.publicPath,
   contentBase: 'src',
   hot: true,
@@ -17,8 +17,8 @@ var serverOptions = {
   historyApiFallback: true
 };
 
-var compiler = webpack(config);
-var webpackDevServer = new WebpackDevServer(compiler, serverOptions);
+const compiler = webpack(config);
+const webpackDevServer = new WebpackDevServer(compiler, serverOptions);
 
 webpackDevServer.listen(config._hotPort, function (err) {
   if (err) {

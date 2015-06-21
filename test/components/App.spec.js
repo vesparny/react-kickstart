@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react/addons';
+/* eslint no-unused-expressions:0 */
+import React from 'react/addons';
 import App from '../../src/components/App';
 import { RouteHandler } from 'react-router';
 import * as utils from '../utils';
@@ -6,7 +7,7 @@ import * as utils from '../utils';
 const { TestUtils } = React.addons;
 
 describe('App', () => {
-  const component = utils.getRenderOutput(<App />);
+  const component = utils.shallowlyRenderedOutput(<App />);
 
   it('should have a div as container', () => {
     expect(component.type).to.equal('div');

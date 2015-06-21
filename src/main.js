@@ -20,7 +20,7 @@ window.React = React;
 
 const router = Router.create({
   routes: routes,
-  location: Router.HashLocation //Router.HistoryLocation
+  location: Router.HashLocation // Router.HistoryLocation
 });
 
 router.run((Handler, state) => {

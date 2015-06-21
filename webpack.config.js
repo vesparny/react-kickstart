@@ -22,13 +22,13 @@ module.exports = {
       test: /\.js?$/,
       exclude: /node_modules/,
       loader: 'react-hot!babel'
-    },{
+    }, {
       test: /\.json?$/,
       exclude: /node_modules/,
       loader: 'json'
-    },{
+    }, {
       test: /\.styl|\.css$/,
-      loader: ExtractTextPlugin.extract("css-loader")
+      loader: ExtractTextPlugin.extract('css-loader')
     }]
   },
   plugins: [
@@ -37,7 +37,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
-    new ExtractTextPlugin("main.css")
+    new ExtractTextPlugin('main.css')
 
   ],
   _hotPort: hotPort

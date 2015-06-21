@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import './Counter.css';
 
-// as long as you don't use setState() or forceUpdate,
-// there is no need of extend React.Component
+// as long as you don't use setState() or forceUpdate(),
+// there is no need to extend React.Component
 export default class Counter {
 
   render() {
-    const { count, handleClick } = this.props
+    const { count, handleClick } = this.props;
 
     return (
       <div className="Counter">
@@ -22,3 +22,8 @@ export default class Counter {
     );
   }
 }
+
+Counter.propTypes = {
+  count: PropTypes.number.isRequired,
+  handleClick: PropTypes.func.isRequired
+};

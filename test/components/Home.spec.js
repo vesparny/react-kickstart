@@ -1,6 +1,7 @@
+/* eslint no-unused-expressions:0 */
 import jsdom from 'mocha-jsdom';
 
-import React, { PropTypes, Component } from 'react/addons';
+import React from 'react/addons';
 import Home from '../../src/components/Home';
 
 const { TestUtils } = React.addons;

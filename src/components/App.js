@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { RouteHandler } from 'react-router';
-
 
 export default class App {
 
   render() {
-    const { pathname } = this.props;
+    let { pathname } = this.props;
 
     return (
       <div>
@@ -14,3 +13,7 @@ export default class App {
     );
   }
 }
+
+App.propTypes = {
+  pathname: PropTypes.string.isRequired
+};
