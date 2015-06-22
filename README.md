@@ -42,7 +42,7 @@ npm start
 npm test
 ```
 
-**Build for production (`/dist` folder)**
+**Build for production (`/dist/` folder)**
 ```
 npm run build
 ```
@@ -53,7 +53,7 @@ npm run jscs
 npm run eslint
 ```
 
-**Generate code coverage report (`/coverage` folder)**
+**Generate code coverage report (`/coverage/` folder)**
 ```
 npm run test:cov
 ```
