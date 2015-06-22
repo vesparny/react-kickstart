@@ -17,7 +17,7 @@ See a [working demo](http://vesparny.github.io/react-kickstart/)
 ## Features
 * webpack and webpack-dev-server setup for development (with hot-module-replacement), and for production (with sourcemaps generation for both css and js bundles).
 * clear separation between [smart and dumb components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
-* styles for dumb components directly loaded from inside the component file.
+* styles for dumb components directly loaded from inside the component file
 * basic routing setup with react-router (you most likely need routing in your app)
 * code written is ES6 syntax and transpiled with [babeljs](https://babeljs.io/)
 * unit tests ([mocha](http://mochajs.org/) + [chai](http://chaijs.com/)) examples with both [shallow-rendering](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering) and [jsdom](https://github.com/tmpvar/jsdom)
@@ -72,5 +72,5 @@ See CHANGELOG.md file
 
 ## Inspiration
 
-* [react-starterify](https://github.com/Granze/react-starterify) by @granze
-* [smart  and dumb components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) article by @gaearon
+* [react-starterify](https://github.com/Granze/react-starterify) by [@granze](https://github.com/gaearon)
+* [smart  and dumb components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) article by [@gaearon](https://github.com/gaearon)
