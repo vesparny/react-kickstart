@@ -15,7 +15,7 @@ This projects aims to be a starting point for your React projects, and a way to 
 See a [working demo](http://vesparny.github.io/react-kickstart/)
 
 ## Features
-* webpack and webpack-dev-server setup for development (with hot-module-replacement), and for production (with sourcemaps generation for both css and js bundles).
+* webpack and webpack-dev-server setup for development (with hot-module-replacement), and for production (with sourcemaps generation for both css and js bundles)
 * clear separation between [smart and dumb components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
 * styles for dumb components directly loaded from inside the component file
 * basic routing setup with react-router (you most likely need routing in your app)
@@ -42,7 +42,7 @@ npm start
 npm test
 ```
 
-**Build for production**
+**Build for production (`/dist` folder)**
 ```
 npm run build
 ```
@@ -53,7 +53,7 @@ npm run jscs
 npm run eslint
 ```
 
-**Generate code coverage report**
+**Generate code coverage report (`/coverage` folder)**
 ```
 npm run test:cov
 ```
