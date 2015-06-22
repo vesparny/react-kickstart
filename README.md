@@ -29,7 +29,6 @@ See a [working demo](http://vesparny.github.io/react-kickstart/)
 **Clone this repository**
 ```
 git clone https://github.com/vesparny/react-kickstart.git
-npm start
 ```
 
 **Start the application in dev mode with hot-module-replacement**
@@ -72,5 +71,5 @@ See CHANGELOG.md file
 
 ## Inspiration
 
-* [react-starterify](https://github.com/Granze/react-starterify) by [@granze](https://github.com/gaearon)
+* [react-starterify](https://github.com/Granze/react-starterify) by [@granze](https://github.com/Granze)
 * [smart  and dumb components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) article by [@gaearon](https://github.com/gaearon)
