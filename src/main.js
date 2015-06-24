@@ -12,12 +12,6 @@ attachFastClick.attach(document.body);
 // Expose globally
 window.React = React;
 
-// Remove 300ms tap delay on mobile devices
-attachFastClick.attach(document.body);
-
-// Expose globally
-window.React = React;
-
 const router = Router.create({
   routes: routes,
   location: Router.HashLocation // Router.HistoryLocation
