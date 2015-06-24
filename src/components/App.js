@@ -3,6 +3,10 @@ import { RouteHandler } from 'react-router';
 
 export default class App {
 
+  static propTypes = {
+    pathname: PropTypes.string.isRequired
+  };
+
   render() {
     let { pathname } = this.props;
 
@@ -13,7 +17,3 @@ export default class App {
     );
   }
 }
-
-App.propTypes = {
-  pathname: PropTypes.string.isRequired
-};

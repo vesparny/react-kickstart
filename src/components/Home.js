@@ -16,6 +16,10 @@ export default class Home extends Component {
     };
   }
 
+  getVersion() {
+    return version;
+  }
+
   increment() {
     this.setState({
       counter: this.state.counter += 1
@@ -40,7 +44,7 @@ export default class Home extends Component {
           <a href="https://twitter.com/vesparny">@vesparny</a>
           <Counter
             count={this.state.counter}
-            handleClick={::this.increment}
+            onIncrement={::this.increment}
           />
           <h3>Powered by:</h3>
           <div className="sm-col sm-col-6 px2">
