@@ -1,9 +1,14 @@
-v1.0.0 - Mon, 22 Jun 2015 10:05:35 GMT
+v1.1.0 - Wed, 24 Jun 2015 16:07:30 GMT
 ---------------------------------------
 
-- Initial release
+- Complete test suite
 
 v1.0.1 - Wed, 24 Jun 2015 09:54:16 GMT
 ---------------------------------------
 
 - Fix code repetition
+
+v1.0.0 - Mon, 22 Jun 2015 10:05:35 GMT
+---------------------------------------
+
+- Initial release
