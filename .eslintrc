@@ -23,7 +23,8 @@
     "mocha": true
   },
   "globals": {
-    "expect": true
+    "expect": true,
+    "sinon": true
   },
   "parser": "babel-eslint",
   "rules": {

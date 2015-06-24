@@ -1,14 +1,57 @@
-import React from 'react/addons';
+/* eslint no-unused-expressions:0 */
+import React, { Component } from 'react/addons';
 import Counter from '../../src/components/Counter';
-import * as utils from '../utils';
+import jsdom from 'mocha-jsdom';
 
 const { TestUtils } = React.addons;
 
-describe('Counter', () => {
-  const component = utils.shallowlyRenderedOutput(<Counter count={10} handleClick={() => null} />);
+describe('Components', () => {
+  jsdom();
+  describe('Counter', () => {
+    // Mock minimal Home interface
+    class Home extends Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          counter: 0
+        };
+      }
 
-  it('should display count', () => {
-    const count = component.props.children.filter((el) => el.type === 'h1')[0];
-    expect(count.props.children.toString()).to.contain('10');
+      increment() {
+        this.setState({
+          counter: this.state.counter += 1
+        });
+      }
+
+      render() {
+        return (
+          <div>
+            <Counter
+              count={this.state.counter}
+              onIncrement={::this.increment}
+            />
+          </div>
+        );
+      }
+    }
+
+    it('should receive and increment counter', () => {
+      const tree = TestUtils.renderIntoDocument(<Home />);
+      const counter = TestUtils.findRenderedComponentWithType(tree, Counter);
+      TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithTag(counter, 'a'));
+      expect(counter.props.count).to.be.equal(1);
+      expect(TestUtils.findRenderedDOMComponentWithTag(counter, 'h1').getDOMNode().textContent)
+        .to.contain('1');
+    });
+
+    describe('increment', () => {
+      it('should get called when a click on button happens', () => {
+        const spy = sinon.spy();
+        const counter = TestUtils.renderIntoDocument(<Counter onIncrement={spy} count={0} />);
+        const button = TestUtils.findRenderedDOMComponentWithTag(counter, 'a');
+        TestUtils.Simulate.click(button);
+        expect(spy).to.have.been.calledOnce;
+      });
+    });
   });
 });
