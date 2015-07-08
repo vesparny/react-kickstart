@@ -23,7 +23,7 @@ export default class Counter extends Component{
         <p className="h3">Click the button to increment the counter</p>
         <a
           onClick={::this.increment}
-          className="h3 button button-big mb4"
+          className="h3 btn btn-primary mb4"
         >
           Increment
         </a>

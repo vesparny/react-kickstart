@@ -12,7 +12,7 @@
   "main": "index.js",
   "scripts": {
     "test": "`NODE_ENV=test npm bin`/mocha --require ./test/test-init --compilers js:babel/register --recursive",
-    "test:cov": "`NODE_ENV=test npm bin`/istanbul cover `npm bin`/_mocha -- --require ./test/test-init --compilers js:babel/register --recursive",
+    "test:cov": "`npm bin`/babel-node `npm bin`/isparta cover --report lcov --report text --report html node_modules/.bin/_mocha -- --require ./test/test-init --compilers js:babel/register --recursive",
     "start": "`npm bin`/nodemon index.js",
     "build": "rm -rf dist && NODE_ENV=production `npm bin`/webpack --config ./webpack.config.js --progress --profile --colors",
     "gh-pages": "./scripts/publish-gh-pages",
@@ -20,34 +20,33 @@
     "jscs": "`npm bin`/jscs ."
   },
   "dependencies": {
-    "basscss": "^6.1.6",
+    "basscss": "^7.0.0",
     "fastclick": "^1.0.6",
     "react": "^0.13.3",
     "react-router": "^0.13.3"
   },
   "devDependencies": {
-    "babel": "^5.6.1",
-    "babel-core": "^5.6.1",
-    "babel-eslint": "^3.1.17",
-    "babel-jscs": "^1.0.2",
-    "babel-loader": "^5.1.4",
+    "babel": "^5.6.14",
+    "babel-eslint": "^3.1.23",
+    "babel-jscs": "^1.0.3",
+    "babel-loader": "^5.3.1",
     "chai": "^3.0.0",
-    "css-loader": "^0.15.1",
-    "eslint": "^0.23.0",
-    "eslint-plugin-react": "^2.5.2",
+    "css-loader": "^0.15.2",
+    "eslint": "^0.24.0",
+    "eslint-plugin-react": "^2.6.4",
     "extract-text-webpack-plugin": "^0.8.2",
-    "istanbul": "^0.3.15",
+    "isparta": "^3.0.3",
     "jscs": "^1.13.1",
     "jsdom": "3.1.2",
     "json-loader": "^0.5.2",
     "mocha": "^2.2.5",
-    "mocha-jsdom": "^0.4.0",
+    "mocha-jsdom": "^1.0.0",
     "nodemon": "^1.3.7",
-    "react-hot-loader": "^1.2.7",
-    "sinon": "^1.15.3",
+    "react-hot-loader": "^1.2.8",
+    "sinon": "^1.15.4",
     "sinon-chai": "^2.8.0",
-    "stats-webpack-plugin": "^0.1.2",
-    "webpack": "^1.9.11",
-    "webpack-dev-server": "^1.9.0"
+    "stats-webpack-plugin": "^0.2.1",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.10.1"
   }
 }
