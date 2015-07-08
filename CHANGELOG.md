@@ -1,3 +1,10 @@
+v1.1.0 - Wed, 08 Jul 2015 14:22:05 GMT
+---------------------------------------
+
+- Plug Isparta for code coverage
+- Add more tests
+- Updating dependencies
+
 v1.1.0 - Wed, 24 Jun 2015 16:07:30 GMT
 ---------------------------------------
 
