@@ -12,7 +12,7 @@
   "main": "index.js",
   "scripts": {
     "test": "`NODE_ENV=test npm bin`/mocha --require ./test/test-init --compilers js:babel/register --recursive",
-    "test:cov": "`npm bin`/babel-node `npm bin`/isparta cover --report lcov --report text --report html node_modules/.bin/_mocha -- --require ./test/test-init --compilers js:babel/register --recursive",
+    "test:cov": "`npm bin`/babel-node `npm bin`/isparta cover --report lcov --report text --report html --root src tape/sum.spec.js",
     "start": "`npm bin`/nodemon index.js",
     "build": "rm -rf dist && NODE_ENV=production `npm bin`/webpack --config ./webpack.config.js --progress --profile --colors",
     "gh-pages": "./scripts/publish-gh-pages",
