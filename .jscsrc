@@ -59,7 +59,7 @@
   "disallowMultipleLineStrings": true,
   "disallowMultipleLineBreaks": true,
   "validateLineBreaks": "LF",
-  "validateQuoteMarks": true,
+  "validateQuoteMarks": null,
   "validateIndentation": 2,
   "disallowMixedSpacesAndTabs": true,
   "disallowTrailingWhitespace": true,

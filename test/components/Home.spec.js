@@ -7,7 +7,7 @@ import { version } from '../../package.json';
 describe('Components', () => {
   describe('Home', () => {
     const component = utils.shallowlyRenderedOutput(< Home / >);
-    it('should contain one "<section>" element', function() {
+    it('should contain one "<section>" element', () => {
       expect(component.type).to.be.equal('section');
     });
 
@@ -17,14 +17,14 @@ describe('Components', () => {
     });
 
     describe('getVersion', () => {
-      it('should return the current version when called', function() {
+      it('should return the current version when called', () => {
         const currentVersion = Home.prototype.getVersion();
         expect(currentVersion).to.be.equal(version);
       });
     });
 
     describe('increment', () => {
-      it('should call setState() once invoked', function() {
+      it('should call setState() once invoked', () => {
         const spy = sinon.spy();
         Home.prototype.increment.call({
           state: {
