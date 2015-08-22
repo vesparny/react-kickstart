@@ -31,6 +31,11 @@ See a [working demo](http://vesparny.github.io/react-kickstart/)
 git clone https://github.com/vesparny/react-kickstart.git
 ```
 
+**Install**
+```
+npm install
+```
+
 **Start the application in dev mode with hot-module-replacement**
 ```
 npm start
