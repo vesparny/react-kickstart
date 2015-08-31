@@ -1,14 +1,14 @@
-import React, { PropTypes } from 'react';
-import { RouteHandler } from 'react-router';
+import React, {PropTypes} from 'react';
+import {RouteHandler} from 'react-router';
 
-export default class App {
+const App = React.createClass({
 
-  static propTypes = {
+  propTypes: {
     pathname: PropTypes.string.isRequired
-  };
+  },
 
   render() {
-    let { pathname } = this.props;
+    const {pathname} = this.props;
 
     return (
       <div>
@@ -16,4 +16,6 @@ export default class App {
       </div>
     );
   }
-}
+});
+
+export default App;

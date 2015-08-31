@@ -2,7 +2,7 @@
 import React from 'react/addons';
 import Home from '../../src/components/Home';
 import * as utils from '../utils';
-import { version } from '../../package.json';
+import {version} from '../../package.json';
 
 describe('Components', () => {
   describe('Home', () => {

@@ -1,6 +1,5 @@
-// load global styles before everything else
+import 'babel/polyfill';
 import 'basscss/css/basscss.css';
-
 import React from 'react';
 import Router from 'react-router';
 import routes from './routes';

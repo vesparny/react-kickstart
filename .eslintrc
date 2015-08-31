@@ -31,7 +31,7 @@
     "eol-last": 2,
     "no-alert": 2,
     "no-empty": 2,
-    "spaced-line-comment": 2,
+    "spaced-comment": 2,
     "no-underscore-dangle": 0,
     "no-var": 2,
     "quotes": [2, "single"],

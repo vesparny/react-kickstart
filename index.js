@@ -1,4 +1,4 @@
 // hook babel
-require('babel-core/register');
+require('babel/register');
 // require webpack dev server
 require('./dev-server');

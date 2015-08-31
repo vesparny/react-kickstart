@@ -1,3 +1,9 @@
+v1.3.0 - Mon, 31 Aug 2015 14:27:42 GMT
+---------------------------------------
+
+- update dependencies
+- fixes [#6](https://github.com/vesparny/react-kickstart/issues/6)
+
 v1.1.0 - Wed, 08 Jul 2015 14:22:05 GMT
 ---------------------------------------
 
