@@ -10,7 +10,6 @@ var isDev = process.env.NODE_ENV !== 'production';
 
 var plugins = isDev ? [
   new webpack.HotModuleReplacementPlugin(),
-  new webpack.NoErrorsPlugin(),
   new ExtractTextPlugin('main.css')
 ] : [
   new ExtractTextPlugin('main.css'),
@@ -19,7 +18,7 @@ var plugins = isDev ? [
       warnings: false
     }
   }),
-  new StatsPlugin(path.join(__dirname, 'dist', 'webpack.stats.json'), {
+  new StatsPlugin('webpack.stats.json', {
     source: false,
     modules: false
   })

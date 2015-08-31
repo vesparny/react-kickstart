@@ -1,10 +1,10 @@
 /* eslint no-unused-expressions:0 */
 import React from 'react/addons';
 import App from '../../src/components/App';
-import { RouteHandler } from 'react-router';
+import {RouteHandler} from 'react-router';
 import * as utils from '../utils';
 
-const { TestUtils } = React.addons;
+const {TestUtils} = React.addons;
 describe('Components', () => {
   describe('App', () => {
     const component = utils.shallowlyRenderedOutput(<App />);

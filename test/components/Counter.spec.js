@@ -1,39 +1,39 @@
 /* eslint no-unused-expressions:0 */
-import React, { Component } from 'react/addons';
+import React from 'react/addons';
 import Counter from '../../src/components/Counter';
 import jsdom from 'mocha-jsdom';
 
-const { TestUtils } = React.addons;
+const {TestUtils} = React.addons;
 
 describe('Components', () => {
   jsdom();
   describe('Counter', () => {
     // Mock minimal Home interface
-    class Home extends Component {
-      constructor(props) {
-        super(props);
-        this.state = {
+    const Home = React.createClass({
+
+      getInitialState() {
+        return {
           counter: 0
         };
-      }
+      },
 
       increment() {
         this.setState({
           counter: this.state.counter += 1
         });
-      }
+      },
 
       render() {
         return (
           <div>
             <Counter
               count={this.state.counter}
-              onIncrement={::this.increment}
+              onIncrement={this.increment.bind(this)}
             />
           </div>
         );
       }
-    }
+    });
 
     it('should receive and increment counter', () => {
       const tree = TestUtils.renderIntoDocument(<Home />);

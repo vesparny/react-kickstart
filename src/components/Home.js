@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Counter from './Counter';
 import {
     version,
@@ -7,24 +7,23 @@ import {
     devDependencies
   } from '../../package.json';
 
-export default class Home extends Component {
+const Home = React.createClass({
 
-  constructor(props) {
-    super(props);
-    this.state = {
+  getInitialState() {
+    return {
       counter: 0
     };
-  }
+  },
 
   getVersion() {
     return version;
-  }
+  },
 
   increment() {
     this.setState({
       counter: this.state.counter += 1
     });
-  }
+  },
 
   render() {
     const deps = Object.keys(dependencies)
@@ -44,7 +43,7 @@ export default class Home extends Component {
           <a href="https://twitter.com/vesparny">@vesparny</a>
           <Counter
             count={this.state.counter}
-            onIncrement={::this.increment}
+            onIncrement={this.increment}
           />
           <h3>Powered by:</h3>
           <div className="sm-col sm-col-6 px2">
@@ -63,4 +62,6 @@ export default class Home extends Component {
       </section>
     );
   }
-}
+});
+
+export default Home;
