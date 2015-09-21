@@ -1,9 +1,7 @@
-/* eslint no-unused-expressions:0 */
-import React from 'react/addons';
+import React from 'react';
 import Counter from '../../src/components/Counter';
 import jsdom from 'mocha-jsdom';
-
-const {TestUtils} = React.addons;
+import TestUtils from 'react-addons-test-utils';
 
 describe('Components', () => {
   jsdom();
@@ -28,7 +26,7 @@ describe('Components', () => {
           <div>
             <Counter
               count={this.state.counter}
-              onIncrement={this.increment.bind(this)}
+              onIncrement={this.increment}
             />
           </div>
         );
@@ -40,7 +38,7 @@ describe('Components', () => {
       const counter = TestUtils.findRenderedComponentWithType(tree, Counter);
       TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithTag(counter, 'a'));
       expect(counter.props.count).to.be.equal(1);
-      expect(TestUtils.findRenderedDOMComponentWithTag(counter, 'h1').getDOMNode().textContent)
+      expect(TestUtils.findRenderedDOMComponentWithTag(counter, 'h1').textContent)
         .to.contain('1');
     });
 

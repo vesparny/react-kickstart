@@ -1,3 +1,10 @@
+v2.0.0 - Mon, 21 Sep 2015 20:45:14 GMT
+---------------------------------------
+
+- css modules + stylus + PostCSS
+- babel-plugin-react-transform + react-transform-hmr
+- production build
+
 v1.3.0 - Mon, 31 Aug 2015 14:27:42 GMT
 ---------------------------------------
 

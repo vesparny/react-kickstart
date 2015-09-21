@@ -1,8 +1,6 @@
-import React from 'react/addons';
+import TestUtils from 'react-addons-test-utils';
 
-const {TestUtils} = React.addons;
-
-export function shallowlyRenderedOutput (Component) {
+export function shallowlyRenderedOutput(Component) {
   const shallowRenderer = TestUtils.createRenderer();
   shallowRenderer.render(Component);
 

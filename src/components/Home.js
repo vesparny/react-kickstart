@@ -6,6 +6,7 @@ import {
     homepage,
     devDependencies
   } from '../../package.json';
+import style from './Home.styl';
 
 const Home = React.createClass({
 
@@ -32,12 +33,12 @@ const Home = React.createClass({
       .map((dep, i) => <li key={i + 10}><b>{dep}</b> : {devDependencies[dep]}</li>);
 
     return (
-      <section className="container px2 py3">
-        <div className="clearfix mxn2 center">
+      <section className="p1 tc">
+        <div>
           <h1>
-            <a href={homepage}>&#9883; react-kickstart</a>
+            <a className="blue" href={homepage}>&#9883; react-kickstart</a>
           </h1>
-          <h2>version {version}</h2>
+          <h2 className="red">version {version}</h2>
           <a href={homepage}>GitHub</a>
           <br />
           <a href="https://twitter.com/vesparny">@vesparny</a>
@@ -46,17 +47,13 @@ const Home = React.createClass({
             onIncrement={this.increment}
           />
           <h3>Powered by:</h3>
-          <div className="sm-col sm-col-6 px2">
+          <div className={style.block}>
             <h4> DEPENDENCIES:</h4>
-            <ul className="list-reset">
-                {deps}
-            </ul>
+            <ul>{deps}</ul>
           </div>
-          <div className="sm-col sm-col-6 px2">
+          <div className={style.block}>
             <h4> DEV-DEPENDENCIES:</h4>
-            <ul className="list-reset">
-                {devDeps}
-            </ul>
+            <ul>{devDeps}</ul>
           </div>
         </div>
       </section>

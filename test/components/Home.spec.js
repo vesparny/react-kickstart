@@ -1,5 +1,4 @@
-/* eslint no-unused-expressions:0 */
-import React from 'react/addons';
+import React from 'react';
 import Home from '../../src/components/Home';
 import * as utils from '../utils';
 import {version} from '../../package.json';
