@@ -4,8 +4,7 @@ npm run build
 rm -rf gh-pages
 mkdir gh-pages
 cd gh-pages
-mkdir dist
-cp -r ../dist/* dist/
+cp -r ../dist/* .
 git init .
 git remote add origin git@github.com:vesparny/react-kickstart.git
 git checkout -b gh-pages
