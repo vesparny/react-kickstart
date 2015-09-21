@@ -36,7 +36,7 @@ describe('Components', () => {
     it('should receive and increment counter', () => {
       const tree = TestUtils.renderIntoDocument(<Home />);
       const counter = TestUtils.findRenderedComponentWithType(tree, Counter);
-      TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithTag(counter, 'a'));
+      TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithTag(counter, 'button'));
       expect(counter.props.count).to.be.equal(1);
       expect(TestUtils.findRenderedDOMComponentWithTag(counter, 'h1').textContent)
         .to.contain('1');
@@ -46,7 +46,7 @@ describe('Components', () => {
       it('should get called when a click on button happens', () => {
         const spy = sinon.spy();
         const counter = TestUtils.renderIntoDocument(<Counter onIncrement={spy} count={0} />);
-        const button = TestUtils.findRenderedDOMComponentWithTag(counter, 'a');
+        const button = TestUtils.findRenderedDOMComponentWithTag(counter, 'button');
         TestUtils.Simulate.click(button);
         expect(spy).to.have.been.calledOnce;
       });
