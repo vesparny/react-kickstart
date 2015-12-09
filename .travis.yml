@@ -1,12 +1,9 @@
 language: node_js
 node_js:
   - "5.1"
-before_script: "npm install -g codeclimate-test-reporter"
+before_script: "npm install -g codecov.io"
 script:
   - npm run lint
   - npm test
   - npm run test:cov
-after_script: "cat coverage/lcov.info | codeclimate"
-addons:
-  code_climate:
-    repo_token: e44cd00e1cb347ff8af337b3e59f25aafeee1d243a31cf47d463c34b51cd1031
+after_script: "cat coverage/lcov.info | codecov.io"
