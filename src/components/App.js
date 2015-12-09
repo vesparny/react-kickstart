@@ -1,18 +1,12 @@
 import React, {PropTypes} from 'react';
 
-const App = React.createClass({
+const App = ({children}) =>
+  <div>
+    {children}
+  </div>;
 
-  propTypes: typeof __DEV__ && {
-    children: PropTypes.object.isRequired
-  },
-
-  render() {
-    return (
-      <div>
-        {this.props.children}
-      </div>
-    );
-  }
-});
+App.propTypes = typeof __DEV__ && {
+  children: PropTypes.object.isRequired
+};
 
 export default App;
