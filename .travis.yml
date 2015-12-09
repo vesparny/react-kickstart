@@ -2,7 +2,10 @@ language: node_js
 node_js:
   - "5.1"
 before_script: "npm install -g codeclimate-test-reporter"
-script: "npm run test:cov"
+script:
+  - npm run lint
+  - npm test
+  - npm run test:cov
 after_script: "cat coverage/lcov.info | codeclimate"
 addons:
   code_climate:

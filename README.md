@@ -59,7 +59,7 @@ npm run build:start
 
 **Run eslint**
 ```
-npm run eslint
+npm run lint
 ```
 
 **Generate code coverage report**
