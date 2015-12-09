@@ -1,55 +1,45 @@
 import React from 'react';
 import Counter from '../../src/components/Counter';
-import jsdom from 'mocha-jsdom';
 import TestUtils from 'react-addons-test-utils';
+import test from 'tape';
+import sinon from 'sinon';
 
-describe('Components', () => {
-  jsdom();
-  describe('Counter', () => {
-    // Mock minimal Home interface
-    const Home = React.createClass({
+const Home = React.createClass({
+  getInitialState() {
+    return {
+      counter: 0
+    };
+  },
 
-      getInitialState() {
-        return {
-          counter: 0
-        };
-      },
-
-      increment() {
-        this.setState({
-          counter: this.state.counter += 1
-        });
-      },
-
-      render() {
-        return (
-          <div>
-            <Counter
-              count={this.state.counter}
-              onIncrement={this.increment}
-            />
-          </div>
-        );
-      }
+  increment() {
+    this.setState({
+      counter: this.state.counter += 1
     });
+  },
 
-    it('should receive and increment counter', () => {
-      const tree = TestUtils.renderIntoDocument(<Home />);
-      const counter = TestUtils.findRenderedComponentWithType(tree, Counter);
-      TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithTag(counter, 'button'));
-      expect(counter.props.count).to.be.equal(1);
-      expect(TestUtils.findRenderedDOMComponentWithTag(counter, 'h1').textContent)
-        .to.contain('1');
-    });
+  render() {
+    return (
+      <div>
+        <Counter
+          count={this.state.counter}
+          onIncrement={this.increment}
+        />
+      </div>
+    );
+  }
+});
 
-    describe('increment', () => {
-      it('should get called when a click on button happens', () => {
-        const spy = sinon.spy();
-        const counter = TestUtils.renderIntoDocument(<Counter onIncrement={spy} count={0} />);
-        const button = TestUtils.findRenderedDOMComponentWithTag(counter, 'button');
-        TestUtils.Simulate.click(button);
-        expect(spy).to.have.been.calledOnce;
-      });
-    });
-  });
+test('Counter', (t) => {
+  const tree = TestUtils.renderIntoDocument( < Home / > );
+  let counter = TestUtils.findRenderedComponentWithType(tree, Counter);
+  TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithTag(counter, 'button'));
+  t.equal(counter.props.count, 1, 'should receive and increment counter');
+  t.equal(TestUtils.findRenderedDOMComponentWithTag(counter, 'h1').textContent, 'Count: 1', 'DOM populated accordingly');
+
+  const spy = sinon.spy();
+  counter = TestUtils.renderIntoDocument(<Counter onIncrement={spy} count={0} />);
+  const button = TestUtils.findRenderedDOMComponentWithTag(counter, 'button');
+  TestUtils.Simulate.click(button);
+  t.ok(spy.calledOnce, 'onIncrement should get called when a click on button happens');
+  t.end();
 });

@@ -6,7 +6,7 @@ import {
     homepage,
     devDependencies
   } from '../../package.json';
-import style from './Home.styl';
+import style from './Home.css';
 
 const Home = React.createClass({
 
@@ -33,12 +33,12 @@ const Home = React.createClass({
       .map((dep, i) => <li key={i + 10}><b>{dep}</b> : {devDependencies[dep]}</li>);
 
     return (
-      <section className="p1 tc">
+      <section className={style.section}>
         <div>
           <h1>
-            <a className="blue" href={homepage}>&#9883; react-kickstart</a>
+            <a href={homepage}>&#9883; react-kickstart</a>
           </h1>
-          <h2 className="red">version {version}</h2>
+          <h2 className={style.h2} >version {version}</h2>
           <a href={homepage}>GitHub</a>
           <br />
           <a href="https://twitter.com/vesparny">@vesparny</a>

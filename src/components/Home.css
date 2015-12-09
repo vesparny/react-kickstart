@@ -1,0 +1,16 @@
+@value small from "../breakpoints.css";
+
+.section {
+  composes: p1 center from "basscss/css/basscss.css";
+}
+
+.h2 {
+  composes: red from "../colors.css";
+}
+
+@media small {
+  .block {
+    float: left;
+    width: 50%;
+  }
+}
