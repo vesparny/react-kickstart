@@ -2,7 +2,7 @@
 **just another react + webpack boilerplate**
 
 [![Build Status](https://travis-ci.org/vesparny/react-kickstart.svg)](https://travis-ci.org/vesparny/react-kickstart)
-[![Test Coverage](https://img.shields.io/codeclimate/coverage/github/vesparny/react-kickstart.svg)](https://codeclimate.com/github/vesparny/react-kickstart)
+[![codecov.io](https://codecov.io/github/vesparny/react-kickstart/coverage.svg?branch=master)](https://codecov.io/github/vesparny/react-kickstart?branch=master)
 [![Dependency status](https://david-dm.org/vesparny/react-kickstart/status.svg)](https://david-dm.org/vesparny/react-kickstart "Dependency status")
 [![Dev dependency status](https://david-dm.org/vesparny/react-kickstart/dev-status.svg)](https://david-dm.org/vesparny/react-kickstart#info=devDependencies "Dev dependency status")
 

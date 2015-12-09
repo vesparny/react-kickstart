@@ -32,7 +32,7 @@
     "autoprefixer": "^6.1.2",
     "babel-cli": "^6.3.15",
     "babel-core": "^6.3.15",
-    "babel-eslint": "^5.0.0-beta4",
+    "babel-eslint": "^5.0.0-beta6",
     "babel-loader": "^6.2.0",
     "babel-plugin-react-transform": "^2.0.0-beta1",
     "babel-polyfill": "^6.3.14",
