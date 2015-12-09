@@ -1,3 +1,13 @@
+<a name="3.0.1"></a>
+## [3.0.1](https://github.com/vesparny/react-kickstart/compare/3.0.0...v3.0.1) (2015-12-09)
+
+
+### Bug Fixes
+
+* **build:** add the ability to link changes in changelog file ([333d30a](https://github.com/vesparny/react-kickstart/commit/333d30a))
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](//compare/v2.0.2...v3.0.0) (2015-12-09)
 
