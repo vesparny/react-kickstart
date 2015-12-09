@@ -12,10 +12,10 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test babel-node test/index.js | tap-spec",
-    "test:cov": "NODE_ENV=test babel-node $(npm bin)/isparta cover $(npm bin)/_mocha -- --require ./test/test-init --recursive",
+    "test:cov": "NODE_ENV=test babel-node $(npm bin)/isparta cover test/index.js",
     "start": "node devServer",
     "build:start": "NODE_ENV=production node prodServer",
-    "build": "rimraf dist && NODE_ENV=production webpack -p --config ./webpack.config.prod.js --progress --profile --colors",
+    "build": "rimraf dist && NODE_ENV=production webpack --config webpack.config.prod.js --progress --profile --colors",
     "gh-pages": "./scripts/publish-gh-pages",
     "eslint": "eslint ."
   },

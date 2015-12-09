@@ -7,7 +7,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StatsPlugin = require('stats-webpack-plugin');
 
 module.exports = {
-  devtool: 'eval',
+  devtool: 'source-map',
   entry: [
     path.join(__dirname, 'src/main.js')
   ],
@@ -35,7 +35,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-      '__DEV__': JSON.stringify(process.env.NODE_ENV)
+      '__DEV__': JSON.stringify(false)
     })
   ],
   module: {
@@ -48,13 +48,11 @@ module.exports = {
       loader: 'json'
     }, {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract('style', 'css')
-    }, {
-      test: /\.styl$/,
-      loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[name]---[local]---[hash:base64:5]!postcss!stylus')
+      loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[name]---[local]---[hash:base64:5]!postcss')
     }]
   },
   postcss: [
-    require('autoprefixer')
+    require('autoprefixer'),
+    require('postcss-modules-values')
   ]
 };

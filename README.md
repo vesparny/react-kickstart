@@ -16,12 +16,14 @@ See a [working demo](http://vesparny.github.io/react-kickstart/)
 
 ## Features
 * webpack + hot-module-replacement ([babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform) + [react-transform-hmr](https://github.com/gaearon/react-transform-hmr))
-* [css-modules](https://github.com/css-modules/css-modules/) + [stylus](https://learnboost.github.io/stylus/) + [PostCSS](https://github.com/postcss/postcss)
+* Stateless functional components
+* [css-modules](https://github.com/css-modules/css-modules/) + [PostCSS](https://github.com/postcss/postcss)
 * basic routing setup with react-router (you most likely need routing in your app)
 * [babeljs](https://babeljs.io/)
-* unit tests ([mocha](http://mochajs.org/) + [chai](http://chaijs.com/)) examples with both [shallow-rendering](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering) and [jsdom](https://github.com/tmpvar/jsdom)
-* code coverage generation using [istanbul](https://gotwarlost.github.io/istanbul/)
-* eslint and jscs configuration
+* unit tests ([tape](https://github.com/substack/tape/) + [sinon](http://sinonjs.org/)) examples with both [shallow-rendering](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering) and [jsdom](https://github.com/tmpvar/jsdom)
+* code coverage with [isparta](https://github.com/douglasduteil/isparta)
+* eslint configuration
+* development and production build
 
 ## Usage
 
@@ -55,9 +57,8 @@ npm run build
 npm run build:start
 ```
 
-**Run jscs and eslint**
+**Run eslint**
 ```
-npm run jscs
 npm run eslint
 ```
 
