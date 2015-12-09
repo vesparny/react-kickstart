@@ -6,4 +6,4 @@ script:
   - npm run lint
   - npm test
   - npm run test:cov
-after_script: "cat coverage/coverage.json | codecov.io"
+after_script: "cat coverage/coverage.json | codecov"
