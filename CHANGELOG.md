@@ -1,3 +1,18 @@
+<a name="3.0.0"></a>
+# [3.0.0](//compare/v2.0.2...v3.0.0) (2015-12-09)
+
+
+### Features
+
+* update to babel6 b46d3db
+* using functional components
+
+
+### BREAKING CHANGES
+
+* using tape instead of mocha
+
+---
 v2.0.2 - Mon, 21 Sep 2015 21:58:14 GMT
 ---------------------------------------
 
