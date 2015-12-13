@@ -1,6 +1,6 @@
 dist
 node_modules
-coverage
+test/coverage
 webpack.config.*.js
 *Server.js
 gh-pages
