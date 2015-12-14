@@ -1,5 +1,8 @@
-import {jsdom} from 'jsdom';
+import {jsdom}
+from 'jsdom';
 import sinon from 'sinon';
+import glob from 'glob';
+import path from 'path';
 
 global.document = jsdom('<!doctype html><html><body></body></html>');
 global.window = document.defaultView;
@@ -13,7 +16,6 @@ require.extensions['.css'] = () => {
   return null;
 };
 
-
-require('./components/App.spec');
-require('./components/Counter.spec');
-require('./components/Home.spec');
+// require all specs
+glob('test/**/*.spec.js', (err, files) =>
+  files.forEach(file => require(path.resolve(process.cwd(), file))));

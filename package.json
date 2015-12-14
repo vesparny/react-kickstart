@@ -53,6 +53,7 @@
     "eslint-plugin-react": "^3.11.3",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^0.9.1",
+    "glob": "^6.0.1",
     "html-webpack-plugin": "^1.7.0",
     "isparta": "^4.0.0",
     "jsdom": "^7.2.0",

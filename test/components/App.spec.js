@@ -5,7 +5,7 @@ import TestUtils from 'react-addons-test-utils';
 import test from 'tape';
 
 test('App', (t) => {
-  const component = utils.shallowlyRenderedOutput( <App /> );
+  const component = utils.shallowlyRenderedOutput( <App><div /></App>);
 
   t.ok(component.type === 'div', 'should have a div as container');
   t.ok(typeof TestUtils.isElementOfType(component.props.children) !== 'undefined', 'should contain children');
