@@ -1,3 +1,13 @@
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/vesparny/react-kickstart/compare/3.0.1...v3.1.0) (2015-12-14)
+
+
+### Features
+
+* using glob to load specs ([17e6f98](https://github.com/vesparny/react-kickstart/commit/17e6f98)), closes [#12](https://github.com/vesparny/react-kickstart/issues/12)
+
+
+
 <a name="3.0.1"></a>
 ## [3.0.1](https://github.com/vesparny/react-kickstart/compare/3.0.0...v3.0.1) (2015-12-09)
 
