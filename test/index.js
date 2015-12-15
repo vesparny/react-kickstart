@@ -1,5 +1,4 @@
-import {jsdom}
-from 'jsdom';
+import {jsdom} from 'jsdom';
 import sinon from 'sinon';
 import glob from 'glob';
 import path from 'path';
