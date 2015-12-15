@@ -1,3 +1,13 @@
+<a name="3.1.1"></a>
+## [3.1.1](https://github.com/vesparny/react-kickstart/compare/3.1.0...v3.1.1) (2015-12-15)
+
+
+### Bug Fixes
+
+* using better scripts to allow commands to run on windows ([c5bd3f2](https://github.com/vesparny/react-kickstart/commit/c5bd3f2)), closes [#9](https://github.com/vesparny/react-kickstart/issues/9)
+
+
+
 <a name="3.1.0"></a>
 # [3.1.0](https://github.com/vesparny/react-kickstart/compare/3.0.1...v3.1.0) (2015-12-14)
 
