@@ -3,19 +3,16 @@ import 'normalize.css';
 import './globals.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Router from 'react-router';
-import createHashHistory from 'history/lib/createHashHistory';
+// only for GitHub pages
+// do prefer import { browserHistory } from 'react-router'
+import Router, {hashHistory} from 'react-router';
 import routes from './routes';
 
 // Expose globally
 window.React = React;
 
-// only for GitHub pages
-// do prefer createBrowserHistory
-const history = createHashHistory();
-
 ReactDOM.render(
   <Router
     children={routes}
-    history={history} />,
+    history={hashHistory} />,
   document.getElementById('root'));
