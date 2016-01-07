@@ -36,7 +36,7 @@ const Home = React.createClass({
       <section className={style.section}>
         <div>
           <h1>
-            <a href={homepage}>&#9883 react-kickstart</a>
+            <a href={homepage}>&#9883; react-kickstart</a>
           </h1>
           <h2 className={style.h2} >version {version}</h2>
           <a href={homepage}>GitHub</a>
