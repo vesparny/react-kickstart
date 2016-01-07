@@ -1,3 +1,17 @@
+<a name="3.2.2"></a>
+## [3.2.2](https://github.com/vesparny/react-kickstart/compare/3.2.0...v3.2.2) (2016-01-07)
+
+
+### Bug Fixes
+
+* put fastclick back ([84a76f9](https://github.com/vesparny/react-kickstart/commit/84a76f9))
+
+### Features
+
+* from eslint to standard ([91685f0](https://github.com/vesparny/react-kickstart/commit/91685f0))
+
+
+
 <a name="3.2.1"></a>
 ## [3.2.1](https://github.com/vesparny/react-kickstart/compare/3.2.0...v3.2.1) (2016-01-07)
 
