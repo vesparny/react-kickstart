@@ -1,8 +1,6 @@
-'use strict';
-
-var path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path')
+var webpack = require('webpack')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   devtool: 'eval',
@@ -46,4 +44,4 @@ module.exports = {
   postcss: [
     require('postcss-modules-values')
   ]
-};
+}

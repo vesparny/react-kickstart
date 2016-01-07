@@ -1,5 +1,5 @@
-import React, {PropTypes} from 'react';
-import style from './Counter.css';
+import React, {PropTypes} from 'react'
+import style from './Counter.css'
 
 const Counter = React.createClass({
 
@@ -8,14 +8,14 @@ const Counter = React.createClass({
     onIncrement: PropTypes.func.isRequired
   },
 
-  increment() {
+  increment () {
     // maybe I'd like to do something here
     // for the moment I just call the callback passed from the parent
-    return this.props.onIncrement();
+    return this.props.onIncrement()
   },
 
-  render() {
-    const {count} = this.props;
+  render () {
+    const {count} = this.props
 
     return (
       <div className={style.counter}>
@@ -25,8 +25,8 @@ const Counter = React.createClass({
           Increment
         </button>
       </div>
-    );
+    )
   }
-});
+})
 
-export default Counter;
+export default Counter
