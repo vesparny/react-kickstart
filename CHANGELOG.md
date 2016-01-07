@@ -1,3 +1,17 @@
+<a name="3.2.3"></a>
+## [3.2.3](https://github.com/vesparny/react-kickstart/compare/3.2.1...v3.2.3) (2016-01-07)
+
+
+### Bug Fixes
+
+* add missing semicolon ([7a95487](https://github.com/vesparny/react-kickstart/commit/7a95487))
+
+### Features
+
+* from eslint to standard ([9d547df](https://github.com/vesparny/react-kickstart/commit/9d547df))
+
+
+
 <a name="3.2.2"></a>
 ## [3.2.2](https://github.com/vesparny/react-kickstart/compare/3.2.0...v3.2.2) (2016-01-07)
 
