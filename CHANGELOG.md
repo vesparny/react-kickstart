@@ -1,3 +1,17 @@
+<a name="3.2.0"></a>
+# [3.2.0](https://github.com/vesparny/react-kickstart/compare/3.1.1...v3.2.0) (2016-01-07)
+
+
+### Bug Fixes
+
+* remove fastclick ([af165a0](https://github.com/vesparny/react-kickstart/commit/af165a0))
+
+### Features
+
+* update dependencies ([6ba57f5](https://github.com/vesparny/react-kickstart/commit/6ba57f5)), closes [#14](https://github.com/vesparny/react-kickstart/issues/14)
+
+
+
 <a name="3.1.1"></a>
 ## [3.1.1](https://github.com/vesparny/react-kickstart/compare/3.1.0...v3.1.1) (2015-12-15)
 
