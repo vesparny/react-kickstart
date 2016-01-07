@@ -21,9 +21,14 @@
     "build:start": "better-npm-run build:start",
     "build": "rimraf dist && better-npm-run build",
     "release": "npm run lint && npm run test && npm run build && rimraf gh-pages && mkdir gh-pages && cd gh-pages && cp -r ../dist/* . && git init . && git remote add origin git@github.com:vesparny/react-kickstart.git && git checkout -b gh-pages && git add . && git commit -m 'publishing' && git push origin gh-pages -f",
-    "lint": "eslint .",
+    "lint": "standard",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w",
     "c": "git-cz"
+  },
+  "standard": {
+    "globals": [
+      "__DEV__"
+    ]
   },
   "betterScripts": {
     "build": {
@@ -63,7 +68,6 @@
     "autoprefixer": "^6.2.3",
     "babel-cli": "^6.4.0",
     "babel-core": "^6.4.0",
-    "babel-eslint": "^5.0.0-beta6",
     "babel-loader": "^6.2.1",
     "babel-plugin-react-transform": "^2.0.0",
     "babel-polyfill": "^6.3.14",
@@ -74,9 +78,6 @@
     "commitizen": "^2.4.6",
     "conventional-changelog": "^0.5.3",
     "css-loader": "^0.23.1",
-    "eslint": "^1.10.3",
-    "eslint-config-vesparny": "^1.2.1",
-    "eslint-plugin-react": "^3.14.0",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "glob": "^6.0.1",
@@ -94,6 +95,7 @@
     "redbox-react": "^1.2.0",
     "rimraf": "^2.5.0",
     "sinon": "^1.17.2",
+    "standard": "^5.4.1",
     "stats-webpack-plugin": "^0.2.2",
     "style-loader": "^0.13.0",
     "tap-spec": "^4.1.1",

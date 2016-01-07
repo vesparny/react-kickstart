@@ -6,6 +6,7 @@
 [![Dependency status](https://david-dm.org/vesparny/react-kickstart/status.svg)](https://david-dm.org/vesparny/react-kickstart "Dependency status")
 [![Dev dependency status](https://david-dm.org/vesparny/react-kickstart/dev-status.svg)](https://david-dm.org/vesparny/react-kickstart#info=devDependencies "Dev dependency status")
 
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 ## Minimal
 It contains just the necessary to get started with React, I decided not to include flux libraries or other complicated stuff like server-rendering in here.
@@ -22,7 +23,6 @@ See a [working demo](http://vesparny.github.io/react-kickstart/)
 * [babeljs](https://babeljs.io/)
 * unit tests ([tape](https://github.com/substack/tape/) + [sinon](http://sinonjs.org/)) examples with both [shallow-rendering](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering) and [jsdom](https://github.com/tmpvar/jsdom)
 * code coverage with [isparta](https://github.com/douglasduteil/isparta)
-* eslint configuration
 * development and production build
 
 ## Usage
@@ -57,7 +57,7 @@ npm run build
 npm run build:start
 ```
 
-**Run eslint**
+**Run code style check**
 ```
 npm run lint
 ```
