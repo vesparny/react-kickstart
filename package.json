@@ -53,6 +53,7 @@
   },
   "dependencies": {
     "basscss": "^7.1.0",
+    "fastclick": "^1.0.6",
     "normalize.css": "^3.0.3",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
