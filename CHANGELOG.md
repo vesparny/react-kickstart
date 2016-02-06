@@ -1,3 +1,9 @@
+<a name="3.5.0"></a>
+# [3.5.0](https://github.com/vesparny/react-kickstart/compare/3.4.0...v3.5.0) (2016-02-06)
+
+
+
+
 <a name="3.4.0"></a>
 # [3.4.0](https://github.com/vesparny/react-kickstart/compare/3.3.0...v3.4.0) (2016-02-06)
 
