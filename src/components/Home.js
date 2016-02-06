@@ -40,9 +40,7 @@ export default class Home extends Component {
             <a href={homepage}>&#9883; react-kickstart</a>
           </h1>
           <h2 className={style.h2} >version {version}</h2>
-          <a href={homepage}>GitHub</a>
-          <br />
-          <a href='https://twitter.com/vesparny'>@vesparny</a>
+          With 💖by <a href='https://twitter.com/vesparny'>@vesparny</a>
           <Counter
             count={this.state.counter}
             onIncrement={this.increment}
