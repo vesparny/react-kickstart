@@ -5,7 +5,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 // only for GitHub pages
 // do prefer import { browserHistory } from 'react-router'
-import Router, {hashHistory} from 'react-router'
+import Router, {hashHistory as history} from 'react-router'
 import attachFastClick from 'fastclick'
 import routes from './routes'
 
@@ -18,5 +18,5 @@ window.React = React
 ReactDOM.render(
   <Router
     children={routes}
-    history={hashHistory} />,
+    history={history} />,
   document.getElementById('root'))
