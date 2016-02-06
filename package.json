@@ -17,7 +17,7 @@
   "scripts": {
     "test": "better-npm-run test",
     "test:cov": "better-npm-run test:cov",
-    "start": "node devServer",
+    "start": "better-npm-run start",
     "build:start": "better-npm-run build:start",
     "build": "rimraf dist && better-npm-run build",
     "release": "npm run lint && npm run test && npm run build && rimraf gh-pages && mkdir gh-pages && cd gh-pages && cp -r ../dist/* . && git init . && git remote add origin git@github.com:vesparny/react-kickstart.git && git checkout -b gh-pages && git add . && git commit -m 'publishing' && git push origin gh-pages -f",
@@ -31,6 +31,12 @@
     ]
   },
   "betterScripts": {
+    "start": {
+      "command": "node devServer",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
     "build": {
       "command": "webpack --config webpack.config.prod.js --progress --profile --colors",
       "env": {
@@ -79,6 +85,7 @@
     "connect-history-api-fallback": "^1.1.0",
     "conventional-changelog": "^0.5.3",
     "css-loader": "^0.23.1",
+    "css-modules-require-hook": "^2.1.0",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "glob": "^6.0.1",

@@ -10,10 +10,7 @@ global.navigator = global.window.navigator
 global.sinon = sinon
 global.__DEV__ = true
 
-// ensure requiring css not to throw
-require.extensions['.css'] = () => {
-  return null
-}
+require('css-modules-require-hook')
 
 // require all specs
 glob('test/**/*.spec.js', (err, files) => {
