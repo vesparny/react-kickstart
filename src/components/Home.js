@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import Counter from './Counter'
 import {
     version,
@@ -8,23 +8,24 @@ import {
   } from '../../package.json'
 import style from './Home.css'
 
-const Home = React.createClass({
-
-  getInitialState () {
-    return {
+export default class Home extends Component {
+  constructor () {
+    super()
+    this.increment = this.increment.bind(this)
+    this.state = {
       counter: 0
     }
-  },
+  }
 
   getVersion () {
     return version
-  },
+  }
 
   increment () {
     this.setState({
       counter: this.state.counter += 1
     })
-  },
+  }
 
   render () {
     const deps = Object.keys(dependencies)
@@ -59,6 +60,4 @@ const Home = React.createClass({
       </section>
     )
   }
-})
-
-export default Home
+}

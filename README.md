@@ -57,9 +57,9 @@ npm run build
 npm run build:start
 ```
 
-**Run code style check**
+**Run code style check with standard**
 ```
-npm run lint
+npm run check-style
 ```
 
 **Generate code coverage report**

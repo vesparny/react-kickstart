@@ -21,7 +21,7 @@
     "build:start": "better-npm-run build:start",
     "build": "rimraf dist && better-npm-run build",
     "release": "npm run lint && npm run test && npm run build && rimraf gh-pages && mkdir gh-pages && cd gh-pages && cp -r ../dist/* . && git init . && git remote add origin git@github.com:vesparny/react-kickstart.git && git checkout -b gh-pages && git add . && git commit -m 'publishing' && git push origin gh-pages -f",
-    "lint": "standard",
+    "check-style": "standard",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "c": "git-cz"
   },
