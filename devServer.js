@@ -1,4 +1,5 @@
 var express = require('express')
+var path = require('path')
 var webpack = require('webpack')
 var config = require('./webpack.config.dev')
 var historyApiFallback = require('connect-history-api-fallback')
@@ -28,7 +29,7 @@ app.use(historyApiFallback())
 
 app.use(require('webpack-hot-middleware')(compiler))
 
-app.use(express.static(__dirname + '/dist'))
+app.use(express.static(path.join(__dirname, '/dist')))
 
 app.listen(config._hotPort, 'localhost', function (err) {
   if (err) {

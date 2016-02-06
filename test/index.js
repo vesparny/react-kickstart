@@ -15,5 +15,5 @@ require('css-modules-require-hook')
 // require all specs
 glob('test/**/*.spec.js', (err, files) => {
   console.error(err)
-  files.forEach(file => require(path.resolve(process.cwd(), file)))
+  files.forEach((file) => require(path.resolve(process.cwd(), file)))
 })

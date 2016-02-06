@@ -18,5 +18,7 @@ window.React = React
 ReactDOM.render(
   <Router
     children={routes}
-    history={history} />,
-  document.getElementById('root'))
+    history={history}
+  />,
+  document.getElementById('root')
+)
