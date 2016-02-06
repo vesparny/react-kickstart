@@ -1,3 +1,13 @@
+<a name="3.5.1"></a>
+## [3.5.1](https://github.com/vesparny/react-kickstart/compare/3.5.0...v3.5.1) (2016-02-06)
+
+
+### Bug Fixes
+
+* fix release command ([c37311a](https://github.com/vesparny/react-kickstart/commit/c37311a))
+
+
+
 <a name="3.5.0"></a>
 # [3.5.0](https://github.com/vesparny/react-kickstart/compare/3.4.0...v3.5.0) (2016-02-06)
 
