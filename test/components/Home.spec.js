@@ -4,12 +4,12 @@ import * as utils from '../utils'
 import {version} from '../../package.json'
 import test from 'tape'
 import sinon from 'sinon'
-import {findWhere} from 'lodash'
+import {find} from 'lodash'
 test('Home', (t) => {
   const component = utils.shallowlyRenderedOutput(<Home />)
 
   t.equal(component.type, 'section', 'should contain one "<section>" element')
-  t.ok(findWhere(component.props.children.props.children, <a href='https://twitter.com/vesparny'>@vesparny</a>), 'should show my twitter handle')
+  t.ok(find(component.props.children.props.children, <a href='https://twitter.com/vesparny'>@vesparny</a>), 'should show my twitter handle')
   t.equal(Home.prototype.getVersion(), version, 'should return the current version when called')
 
   const spy = sinon.spy()
