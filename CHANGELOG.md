@@ -1,3 +1,13 @@
+<a name="3.5.2"></a>
+## [3.5.2](https://github.com/vesparny/react-kickstart/compare/3.5.1...v3.5.2) (2016-02-10)
+
+
+### Bug Fixes
+
+* fix failing travis builds ([a31723c](https://github.com/vesparny/react-kickstart/commit/a31723c))
+
+
+
 <a name="3.5.1"></a>
 ## [3.5.1](https://github.com/vesparny/react-kickstart/compare/3.5.0...v3.5.1) (2016-02-06)
 
