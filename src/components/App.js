@@ -5,7 +5,7 @@ const App = ({children}) =>
     {children}
   </div>
 
-App.propTypes = typeof __DEV__ && {
+App.propTypes = {
   children: PropTypes.object.isRequired
 }
 

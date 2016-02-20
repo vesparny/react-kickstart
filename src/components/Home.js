@@ -37,7 +37,7 @@ export default class Home extends Component {
       <section className={style.section}>
         <div>
           <h1>
-            <a href={homepage}>&#9883; react-kickstart</a>
+            <a href={homepage}>react-kickstart</a>
           </h1>
           <h2 className={style.h2} >version {version}</h2>
           With 💖by <a href='https://twitter.com/vesparny'>@vesparny</a>
