@@ -1,9 +1,7 @@
 import 'babel-polyfill'
-import 'normalize.css'
+require('normalize.css/normalize.css')
 import React from 'react'
 import ReactDOM from 'react-dom'
-// only for GitHub pages
-// do prefer import { browserHistory } from 'react-router'
 import attachFastClick from 'fastclick'
 
 const rootEl = document.getElementById('root')
