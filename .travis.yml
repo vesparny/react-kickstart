@@ -5,5 +5,5 @@ before_script: "npm install -g codecov.io"
 script:
   - npm run lint
   - npm test
-  - npm run test:cov
+  - npm run test:cover
 after_script: "cat coverage/lcov.info | codecov"
