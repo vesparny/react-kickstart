@@ -8,21 +8,17 @@
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-## Minimal
-It contains just the necessary to get started with React, I decided not to include flux libraries or other complicated stuff like server-rendering in here.
-
-This projects aims to be a starting point for your React projects, and a way to learn it for newcomers.
-
 See a [working demo](http://vesparny.github.io/react-kickstart/)
 
 ## Features
-* webpack + hot-module-replacement ([babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform) + [react-transform-hmr](https://github.com/gaearon/react-transform-hmr))
+* webpack + vanilla hot-module-replacement
 * Stateless functional components
+* redux
 * [css-modules](https://github.com/css-modules/css-modules/) + [PostCSS](https://github.com/postcss/postcss)
 * basic routing setup with react-router (you most likely need routing in your app)
 * [babeljs](https://babeljs.io/)
-* unit tests ([tape](https://github.com/substack/tape/) + [sinon](http://sinonjs.org/)) examples with both [shallow-rendering](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering) and [jsdom](https://github.com/tmpvar/jsdom)
-* code coverage with [isparta](https://github.com/douglasduteil/isparta)
+* unit tests ([ava](https://github.com/sindresorhus/ava) + [sinon](http://sinonjs.org/)) examples with both [shallow-rendering](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering) and [jsdom](https://github.com/tmpvar/jsdom)
+* code coverage with [nyc](https://github.com/bcoe/nyc)
 * development and production build
 
 ## Usage

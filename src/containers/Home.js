@@ -1,33 +1,25 @@
-import React, {Component} from 'react'
-import Counter from './Counter'
+import React, {Component, PropTypes} from 'react'
+import Counter from '../components/Counter'
 import {
-    version,
-    dependencies,
-    homepage,
-    devDependencies
-  } from '../../package.json'
+  version,
+  dependencies,
+  homepage,
+  devDependencies
+} from '../../package.json'
+
+import * as counterActions from '../actions/counter'
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
 import style from './Home.css'
 
-export default class Home extends Component {
-  constructor () {
-    super()
-    this.increment = this.increment.bind(this)
-    this.state = {
-      counter: 0
-    }
-  }
+class Home extends Component {
 
   getVersion () {
     return version
   }
 
-  increment () {
-    this.setState({
-      counter: this.state.counter += 1
-    })
-  }
-
   render () {
+    const {counter, increment} = this.props
     const deps = Object.keys(dependencies)
       .map((dep, i) => <li key={i}><b>{dep}</b> : {dependencies[dep]}</li>)
     const devDeps = Object.keys(devDependencies)
@@ -42,8 +34,8 @@ export default class Home extends Component {
           <h2 className={style.h2} >version {version}</h2>
           With 💖by <a href='https://twitter.com/vesparny'>@vesparny</a>
           <Counter
-            count={this.state.counter}
-            onIncrement={this.increment}
+            count={counter}
+            onIncrement={increment}
           />
           <h3>Powered by:</h3>
           <div className={style.block}>
@@ -59,3 +51,18 @@ export default class Home extends Component {
     )
   }
 }
+
+Home.propTypes = {
+  counter: PropTypes.number.isRequired,
+  increment: PropTypes.func.isRequired
+}
+
+function mapStateToProps ({counter}) {
+  return {counter}
+}
+
+function mapDispatchToProps (dispatch) {
+  return bindActionCreators(counterActions, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

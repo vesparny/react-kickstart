@@ -7,4 +7,8 @@ global.navigator = window.navigator
 
 global.__DEV__ = true
 
-require('css-modules-require-hook')
+const hook = require('css-modules-require-hook')
+
+hook({
+  generateScopedName: '[name]__[local]___[hash:base64:5]'
+})
