@@ -1,3 +1,16 @@
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/vesparny/react-kickstart/compare/3.5.3...v4.0.0) (2016-04-07)
+
+
+### Features
+
+* adding api proxy ([5062648](https://github.com/vesparny/react-kickstart/commit/5062648))
+* from tape to ava ([3485950](https://github.com/vesparny/react-kickstart/commit/3485950))
+* redux ([be071f4](https://github.com/vesparny/react-kickstart/commit/be071f4))
+* use vanilla hmr ([e3def1a](https://github.com/vesparny/react-kickstart/commit/e3def1a))
+
+
+
 <a name="3.5.3"></a>
 ## [3.5.3](https://github.com/vesparny/react-kickstart/compare/3.5.2...v3.5.3) (2016-02-20)
 
