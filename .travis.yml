@@ -3,7 +3,7 @@ node_js:
   - "5.1"
 before_script: "npm install -g codecov.io"
 script:
-  - npm run check-style
+  - npm run lint
   - npm test
   - npm run test:cov
 after_script: "cat coverage/lcov.info | codecov"
