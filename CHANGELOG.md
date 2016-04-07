@@ -1,3 +1,13 @@
+<a name="4.0.1"></a>
+## [4.0.1](https://github.com/vesparny/react-kickstart/compare/4.0.0...v4.0.1) (2016-04-07)
+
+
+### Features
+
+* react 15 :) ([6c8bf7b](https://github.com/vesparny/react-kickstart/commit/6c8bf7b))
+
+
+
 <a name="4.0.0"></a>
 # [4.0.0](https://github.com/vesparny/react-kickstart/compare/3.5.3...v4.0.0) (2016-04-07)
 
