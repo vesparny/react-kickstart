@@ -45,5 +45,5 @@ app.listen(config._hotPort, 'localhost', function (err) {
   if (err) {
     console.log(err)
   }
-  console.info('==> 🌎 Listening on port %s. Open up http://localhost:%s/ in your browser.', config._hotPort, config._hotPort)
+  console.info('==> 🌎 Listening on port %s', config._hotPort)
 })

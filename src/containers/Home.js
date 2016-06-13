@@ -33,6 +33,10 @@ class Home extends Component {
           </h1>
           <h2 className={style.h2} >version {version}</h2>
           With 💖by <a href='https://twitter.com/vesparny'>@vesparny</a>
+          <p>
+            <a href='https://david-dm.org/vesparny/react-kickstart' title='Dependency status'><img alt='Dependency status' src='https://david-dm.org/vesparny/react-kickstart/status.svg' /></a>
+            <a href='https://david-dm.org/vesparny/react-kickstart#info=devDependencies' title='Dev dependency status'><img alt='Dev dependency status' src='https://david-dm.org/vesparny/react-kickstart/dev-status.svg' /></a>
+          </p>
           <Counter
             count={counter}
             onIncrement={increment}
