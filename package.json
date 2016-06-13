@@ -74,7 +74,7 @@
     "express": "^4.13.4",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.21.0",
-    "http-proxy-middleware": "^0.15.2",
+    "http-proxy-middleware": "^0.16.0",
     "jsdom": "^9.2.1",
     "json-loader": "^0.5.4",
     "lodash": "^4.13.1",
