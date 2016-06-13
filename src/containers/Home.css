@@ -1,7 +1,8 @@
 @value small from "../breakpoints.css";
 
 .section {
-  composes: p1 center from "basscss/css/basscss.css";
+  padding: 1em;
+  text-align: center;
 }
 
 .h2 {

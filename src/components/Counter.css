@@ -1,7 +1,7 @@
 .button {
-  composes: p1 from "basscss/css/basscss.css"
+  padding: 1em;
 }
 
 .counter {
-  composes: green from "../colors.css"
+  composes: green from "../colors.css";
 }

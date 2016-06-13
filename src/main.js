@@ -1,5 +1,5 @@
 import 'babel-polyfill'
-require('normalize.css/normalize.css')
+import 'normalize.css/normalize.css'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import attachFastClick from 'fastclick'
