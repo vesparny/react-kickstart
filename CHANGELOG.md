@@ -1,3 +1,7 @@
+<a name="4.0.2"></a>
+# [4.1.0](https://github.com/vesparny/react-kickstart/compare/4.0.1...v4.0.2) (2016-06-13)
+
+
 <a name="4.0.1"></a>
 ## [4.0.1](https://github.com/vesparny/react-kickstart/compare/4.0.0...v4.0.1) (2016-04-07)
 
