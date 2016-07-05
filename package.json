@@ -1,6 +1,6 @@
 {
   "name": "react-kickstart",
-  "version": "4.0.2",
+  "version": "5.0.0",
   "description": "just another react + webpack boilerplate.",
   "private": true,
   "author": "Alessandro Arnodo <alessandro@arnodo.net> (https://alessandro.arnodo.net)",
@@ -50,7 +50,7 @@
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
     "react-router": "^2.5.2",
-    "tachyons": "^4.0.0-beta.35"
+    "tachyons": "^4.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
@@ -82,9 +82,7 @@
     "stats-webpack-plugin": "^0.4.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
-    "webpack-dev-middleware": "^1.6.1",
-    "webpack-dev-server": "^1.14.1",
-    "webpack-hot-middleware": "^2.12.0"
+    "webpack-dev-server": "^1.14.1"
   },
   "config": {
     "commitizen": {

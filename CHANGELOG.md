@@ -1,3 +1,19 @@
+<a name="5.0.0"></a>
+# [5.0.0](https://github.com/vesparny/react-kickstart/compare/4.0.2...v5.0.0) (2016-07-05)
+
+
+### Bug Fixes
+
+* **tests:** add more tests ([c6f000b](https://github.com/vesparny/react-kickstart/commit/c6f000b))
+
+
+### Features
+
+* **boilerplate:** adding aphrodite ([561034b](https://github.com/vesparny/react-kickstart/commit/561034b))
+* **boilerplate:** remove redux in order to keep the kickstarter as simple as possible ([cf710f2](https://github.com/vesparny/react-kickstart/commit/cf710f2))
+
+
+
 <a name="4.0.2"></a>
 # [4.1.0](https://github.com/vesparny/react-kickstart/compare/4.0.1...v4.0.2) (2016-06-13)
 
