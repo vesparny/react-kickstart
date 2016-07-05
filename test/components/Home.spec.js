@@ -1,11 +1,11 @@
-/*
 import React from 'react'
-import Home from '../../src/containers/Home'
+import Home from '../../src/components/Home'
 import * as utils from '../utils'
-import {version} from '../../package.json'
+import { version } from '../../package.json'
 import test from 'ava'
 import sinon from 'sinon'
-import {find} from 'lodash'
+import { find } from 'lodash'
+
 test('is properly shaped', (t) => {
   const component = utils.shallowlyRenderedOutput(<Home />)
 
@@ -20,10 +20,5 @@ test('is properly shaped', (t) => {
     },
     setState: spy
   })
-  t.truthy(spy.calledOnce, 'increment should call setState() once invoked')
-})
-*/
-import test from 'ava'
-test('is properly shaped', (t) => {
-  t.truthy(true)
+  t.truthy(spy.calledOnce)
 })
