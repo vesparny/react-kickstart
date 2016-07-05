@@ -35,6 +35,7 @@
   "ava": {
     "babel": "inherit",
     "require": [
+      "babel-register",
       "./test/setup.js"
     ]
   },
@@ -43,11 +44,13 @@
     "globals": []
   },
   "dependencies": {
+    "aphrodite": "^0.4.0",
     "fastclick": "^1.0.6",
     "normalize.css": "^4.2.0",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
-    "react-router": "^2.5.2"
+    "react-router": "^2.5.2",
+    "tachyons": "^4.0.0-beta.35"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
@@ -63,6 +66,7 @@
     "conventional-changelog-cli": "^1.2.0",
     "cross-env": "^1.0.8",
     "css-loader": "^0.23.1",
+    "cz-conventional-changelog": "^1.1.6",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.22.0",
@@ -81,5 +85,10 @@
     "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.12.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   }
 }

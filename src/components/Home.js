@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import Counter from '../components/Counter'
 import {
   version,
@@ -34,10 +34,10 @@ class Home extends Component {
       .map((dep, i) => <li key={i + 10}><b>{dep}</b> : {devDependencies[dep]}</li>)
 
     return (
-      <section className>
+      <section className='center w-60 tc cf'>
         <div>
           <h1>
-            <a href={homepage}>react-kaaaickstart</a>
+            <a href={homepage}>react-kickstart</a>
           </h1>
           <h2 className>version {version}</h2>
           With  💙 by <a href='https://twitter.com/vesparny'>@vesparny</a>
@@ -50,11 +50,11 @@ class Home extends Component {
             onIncrement={this.increment}
           />
           <h3>Powered by:</h3>
-          <div className>
+          <div className='fl w-50'>
             <h4> DEPENDENCIES:</h4>
             <ul>{deps}</ul>
           </div>
-          <div className>
+          <div className='fl w-50'>
             <h4> DEV-DEPENDENCIES:</h4>
             <ul>{devDeps}</ul>
           </div>
