@@ -3,7 +3,7 @@
 ## Pull Requests
 
 **Please follow our commit message conventions** even if you're making a small change! This repository follows the
-[conventional-changelog](https://github.com/ajoslin/conventional-changelog/) standard and uses [this](https://github.com/rebelliard/rb-conventional-changelog) [commitizen](https://commitizen.github.io/cz-cli/) adapter to write consistent commit messages.
+[conventional-changelog](https://github.com/ajoslin/conventional-changelog/) standard and uses [commitizen](https://commitizen.github.io/cz-cli/) to create consistent commit messages.
 
 Please do the following:
 

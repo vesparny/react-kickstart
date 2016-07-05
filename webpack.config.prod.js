@@ -32,8 +32,7 @@ module.exports = {
       modules: false
     }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-      '__DEV__': JSON.stringify(false)
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
   ],
   module: {
@@ -46,11 +45,7 @@ module.exports = {
       loader: 'json'
     }, {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[name]---[local]---[hash:base64:5]!postcss')
+      loader: ExtractTextPlugin.extract('style', 'css')
     }]
-  },
-  postcss: [
-    require('autoprefixer'),
-    require('postcss-modules-values')
-  ]
+  }
 }

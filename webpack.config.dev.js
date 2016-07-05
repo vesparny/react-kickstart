@@ -5,7 +5,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
-    'webpack-hot-middleware/client?reload=false',
+    'webpack-dev-server/client',
+    'webpack/hot/dev-server',
     path.join(__dirname, 'src/main.js')
   ],
   output: {
@@ -21,8 +22,7 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development'),
-      '__DEV__': JSON.stringify(process.env.NODE_ENV)
+      'process.env.NODE_ENV': JSON.stringify('development')
     })
   ],
   module: {
@@ -35,11 +35,8 @@ module.exports = {
       loader: 'json'
     }, {
       test: /\.css$/,
-      loader: 'style!css?modules&&importLoaders=1&localIdentName=[name]---[local]---[hash:base64:5]!postcss'
+      loader: 'style!css'
     }]
   },
-  _hotPort: 8000,
-  postcss: [
-    require('postcss-modules-values')
-  ]
+  _hotPort: 3000
 }

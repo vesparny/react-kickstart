@@ -1,5 +1,4 @@
-import React, {PropTypes, Component} from 'react'
-import style from './Counter.css'
+import React, { PropTypes, Component } from 'react'
 
 export default class Counter extends Component {
   increment (text, e) {
@@ -13,10 +12,10 @@ export default class Counter extends Component {
     const boundClick = this.increment.bind(this, 'clicking')
 
     return (
-      <div className={style.counter}>
+      <div className>
         <h1>Count: {count}</h1>
         <p>Click the button to increment the counter</p>
-        <button className={style.button} onClick={boundClick}>
+        <button className onClick={boundClick}>
           Increment
         </button>
       </div>

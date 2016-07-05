@@ -1,25 +1,11 @@
-var express = require('express')
-var path = require('path')
 var webpack = require('webpack')
-var config = require('./webpack.config.dev')
-var historyApiFallback = require('connect-history-api-fallback')
-var proxyMiddleware = require('http-proxy-middleware')
-var proxy = proxyMiddleware('/api', {
-  target: 'https://api.github.com',
-  changeOrigin: true,
-  pathRewrite: {
-    '^/api': '/'
-  }
-})
-
-var app = express()
-
-var compiler = webpack(config)
-
-app.use(proxy)
-
-var wpDevMiddleaware = require('webpack-dev-middleware')(compiler, {
-  publicPath: config.output.publicPath,
+var WebpackDevServer = require('webpack-dev-server')
+var webPackConfig = require('./webpack.config.dev')
+var compiler = webpack(webPackConfig)
+var webServerConfig = {
+  publicPath: webPackConfig.output.publicPath,
+  hot: true,
+  historyApiFallback: true,
   stats: {
     colors: true,
     hash: false,
@@ -28,22 +14,9 @@ var wpDevMiddleaware = require('webpack-dev-middleware')(compiler, {
     chunkModules: false,
     modules: false
   }
-})
+}
 
-app.use(wpDevMiddleaware)
+var server = new WebpackDevServer(compiler, webServerConfig)
 
-app.use(historyApiFallback())
-
-// https://github.com/webpack/webpack-dev-middleware/pull/44
-app.use(wpDevMiddleaware)
-
-app.use(require('webpack-hot-middleware')(compiler))
-
-app.use(express.static(path.join(__dirname, '/dist')))
-
-app.listen(config._hotPort, 'localhost', function (err) {
-  if (err) {
-    console.log(err)
-  }
-  console.info('==> 🌎 Listening on port %s', config._hotPort)
-})
+server.listen(webPackConfig._hotPort)
+console.info('==> 🌎 Listening on port %s', webPackConfig._hotPort)

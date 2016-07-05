@@ -2,6 +2,6 @@ ul {
   list-style: none
 }
 
-:global(#root) {
+#root {
   height: 100%;
 }

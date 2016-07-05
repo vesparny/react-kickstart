@@ -1,7 +1,0 @@
-.button {
-  padding: 1em;
-}
-
-.counter {
-  composes: green from "../colors.css";
-}

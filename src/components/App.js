@@ -1,9 +1,7 @@
-import React, {PropTypes} from 'react'
+import React, { PropTypes } from 'react'
 
 const App = ({children}) =>
-  <div>
-    {children}
-  </div>
+  <div>{children}</div>
 
 App.propTypes = {
   children: PropTypes.object.isRequired
