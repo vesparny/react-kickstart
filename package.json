@@ -46,7 +46,7 @@
   "dependencies": {
     "aphrodite": "^0.4.0",
     "fastclick": "^1.0.6",
-    "normalize.css": "^4.2.0",
+    "normalize.css": "^5.0.0",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
     "react-router": "^2.5.2",
