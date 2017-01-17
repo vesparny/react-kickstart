@@ -1,14 +1,22 @@
 import React from 'react'
-import {Router, browserHistory, hashHistory} from 'react-router'
-import routes from '../routes'
-const history = window.location.hostname === 'vesparny.github.io'
-  ? hashHistory // for GitHub pages
-  : browserHistory
+import {injectGlobal} from 'styled-components'
+import BrowserRouter from 'react-router/BrowserRouter'
+import Match from 'react-router/Match'
+import Home from './Home'
 
 const Root = () =>
-  <Router
-    children={routes}
-    history={history}
-  />
+  <BrowserRouter>
+    <Match pattern='/' component={Home} />
+  </BrowserRouter>
 
+injectGlobal`
+  ul {
+    list-style: none
+    padding: 0
+  }
+
+  #root {
+    height: 100%
+  }
+`
 export default Root
