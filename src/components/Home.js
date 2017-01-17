@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
+import {Box, Flex} from 'reflexbox'
+import s from 'styled-components'
 import Counter from '../components/Counter'
 import {
   version,
@@ -6,11 +8,25 @@ import {
   homepage,
   devDependencies
 } from '../../package.json'
+import colors from '../colors'
+
+const Wrapper = s(Box)`
+  color: ${colors.black}
+  text-align: center
+`
+
+const Column = s(Box)`
+  color: ${colors.grey}
+`
+const Container = s(Flex)`
+  width: 60%
+  margin: 0 auto
+`
 
 class Home extends Component {
+
   constructor () {
     super()
-    this.increment = this.increment.bind(this)
     this.state = {
       counter: 0
     }
@@ -25,10 +41,6 @@ class Home extends Component {
     })
   }
 
-  getVersion () {
-    return version
-  }
-
   render () {
     const {counter} = this.state
     const deps = Object.keys(dependencies)
@@ -37,7 +49,7 @@ class Home extends Component {
       .map((dep, i) => <li key={i + 10}><b>{dep}</b> : {devDependencies[dep]}</li>)
 
     return (
-      <section className='center w-60 tc cf'>
+      <Wrapper>
         <div>
           <h1>
             <a href={homepage}>react-kickstart</a>
@@ -50,19 +62,21 @@ class Home extends Component {
           </p>
           <Counter
             count={counter}
-            onIncrement={this.increment}
+            onIncrement={() => this.increment()}
           />
           <h3>Powered by:</h3>
-          <div className='fl w-50'>
-            <h4> DEPENDENCIES:</h4>
-            <ul>{deps}</ul>
-          </div>
-          <div className='fl w-50'>
-            <h4> DEV-DEPENDENCIES:</h4>
-            <ul>{devDeps}</ul>
-          </div>
+          <Container wrap>
+            <Column sm={12} md={6}>
+              <h4> DEPENDENCIES:</h4>
+              <ul>{deps}</ul>
+            </Column>
+            <Column sm={12} md={6}>
+              <h4> DEV-DEPENDENCIES:</h4>
+              <ul>{devDeps}</ul>
+            </Column>
+          </Container>
         </div>
-      </section>
+      </Wrapper>
     )
   }
 }

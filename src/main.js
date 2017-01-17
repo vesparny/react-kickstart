@@ -1,6 +1,5 @@
 import 'babel-polyfill'
 import 'normalize.css/normalize.css'
-import 'tachyons'
 
 import React from 'react'
 import ReactDOM from 'react-dom'

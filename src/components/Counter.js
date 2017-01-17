@@ -1,6 +1,11 @@
-import React, { PropTypes, Component } from 'react'
+import React, {PropTypes, Component} from 'react'
+import s from 'styled-components'
 import Button from './Button'
 import colors from '../colors'
+
+const Wrapper = s.div`
+  color: ${colors.green}
+`
 
 class Counter extends Component {
 
@@ -15,13 +20,11 @@ class Counter extends Component {
     const boundClick = this.increment.bind(this, 'clicking')
 
     return (
-      <div>
+      <Wrapper>
         <h1>Count: {count}</h1>
         <p>Click the button to increment the counter</p>
-        <Button onClick={boundClick}>
-          Increment
-        </Button>
-      </div>
+        <Button onClick={boundClick}>Increment</Button>
+      </Wrapper>
     )
   }
 }

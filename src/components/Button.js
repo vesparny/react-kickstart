@@ -1,8 +1,13 @@
-import styled from 'styled-components'
+import s from 'styled-components'
+import colors from '../colors'
 
-const Button = styled.button`
+const Button = s.button`
   border: none
+  color: white
   padding: 1em
+  border-radius: 3px
+  cursor: pointer
+  background-color: ${colors.blue}
 `
 
 export default Button
