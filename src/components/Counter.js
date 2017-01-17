@@ -1,11 +1,6 @@
 import React, { PropTypes, Component } from 'react'
-import {StyleSheet, css} from 'aphrodite'
+import Button from './Button'
 import colors from '../colors'
-
-const styles = StyleSheet.create({
-  counter: {color: colors.green},
-  button: {border: 'none', padding: '1em'}
-})
 
 class Counter extends Component {
 
@@ -20,12 +15,12 @@ class Counter extends Component {
     const boundClick = this.increment.bind(this, 'clicking')
 
     return (
-      <div className={css(styles.counter)}>
+      <div>
         <h1>Count: {count}</h1>
         <p>Click the button to increment the counter</p>
-        <button className={css(styles.button)} onClick={boundClick}>
+        <Button onClick={boundClick}>
           Increment
-        </button>
+        </Button>
       </div>
     )
   }
