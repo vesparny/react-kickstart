@@ -17,8 +17,11 @@ class Home extends Component {
   }
 
   increment () {
-    this.setState({
-      counter: this.state.counter += 1
+    this.setState((prevState, props) => {
+      const count = prevState.counter += 1
+      return {
+        counter: count
+      }
     })
   }
 

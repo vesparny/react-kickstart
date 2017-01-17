@@ -26,17 +26,16 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [{
+    rules: [{
       test: /\.js?$/,
       exclude: /node_modules/,
-      loader: 'babel'
-    }, {
-      test: /\.json?$/,
-      loader: 'json'
+      loader: 'babel-loader'
     }, {
       test: /\.css$/,
-      loader: 'style!css'
+      use: [
+        'style-loader',
+        'css-loader'
+      ]
     }]
-  },
-  _hotPort: 3000
+  }
 }

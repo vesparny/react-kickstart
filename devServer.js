@@ -15,8 +15,9 @@ var webServerConfig = {
     modules: false
   }
 }
+var port = 3000
 
 var server = new WebpackDevServer(compiler, webServerConfig)
 
-server.listen(webPackConfig._hotPort)
-console.info('==> 🌎 Listening on port %s', webPackConfig._hotPort)
+server.listen(port)
+console.info('==> 🌎 Listening on port %s', port)

@@ -14,14 +14,18 @@ module.exports = {
     filename: '[name]-[hash].min.js'
   },
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.tpl.html',
       inject: 'body',
       filename: 'index.html'
     }),
-    new ExtractTextPlugin('[name]-[hash].min.css'),
+    new ExtractTextPlugin({
+      filename: 'a.min.css',
+      disable: false,
+      allChunks: true
+    }),
     new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
       compressor: {
         warnings: false,
         screw_ie8: true
@@ -32,20 +36,22 @@ module.exports = {
       modules: false
     }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+      }
     })
   ],
   module: {
-    loaders: [{
-      test: /\.js?$/,
+    rules: [{
+      test: /.js$/,
       exclude: /node_modules/,
-      loader: 'babel'
+      loader: 'babel-loader'
     }, {
-      test: /\.json?$/,
-      loader: 'json'
-    }, {
-      test: /\.css$/,
-      loader: ExtractTextPlugin.extract('style', 'css')
+      test: /.css$/,
+      loader: ExtractTextPlugin.extract({
+        fallbackLoader: 'style-loader',
+        loader: 'css-loader'
+      })
     }]
   }
 }
