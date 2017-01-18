@@ -1,9 +1,8 @@
 language: node_js
 node_js:
-  - "5.1"
+  - "7"
 before_script: "npm install -g codecov.io"
 script:
   - npm run lint
   - npm test
-  - npm run test:cover
 after_script: "cat coverage/lcov.info | codecov"
