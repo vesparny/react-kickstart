@@ -1,3 +1,4 @@
+// @flow
 import React, {Component} from 'react'
 import {Box, Flex} from 'reflexbox'
 import s from 'styled-components'
@@ -24,14 +25,12 @@ const Container = s(Flex)`
 `
 
 class Home extends Component {
-
-  constructor () {
-    super()
-    this.state = {
-      counter: 0
-    }
+  state: {
+    counter: number
   }
-
+  state = {
+    counter: 0
+  }
   increment () {
     this.setState((prevState, props) => {
       const count = prevState.counter += 1

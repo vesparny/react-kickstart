@@ -1,4 +1,5 @@
-import React, {PropTypes, Component} from 'react'
+// @flow
+import React, {Component} from 'react'
 import s from 'styled-components'
 import Button from './Button'
 import colors from '../colors'
@@ -7,9 +8,14 @@ const Wrapper = s.div`
   color: ${colors.green}
 `
 
-class Counter extends Component {
+type Props = {
+  count: number,
+  onIncrement: () => void,
+}
 
-  increment (text, e) {
+class Counter extends Component {
+  props: Props
+  increment (text: string, e: any) : void {
     // maybe I'd like to do something here
     // for the moment I just call the callback passed from the parent
     return this.props.onIncrement()
@@ -27,11 +33,6 @@ class Counter extends Component {
       </Wrapper>
     )
   }
-}
-
-Counter.propTypes = {
-  count: PropTypes.number.isRequired,
-  onIncrement: PropTypes.func.isRequired
 }
 
 export default Counter

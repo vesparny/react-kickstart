@@ -1,9 +1,11 @@
 import 'babel-polyfill'
-import 'normalize.css/normalize.css'
+import 'sanitize.css/sanitize.css'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
 import attachFastClick from 'fastclick'
+
+import '!file-loader?name=[name].[ext]!./assets/favicon.ico'
 
 const rootEl = document.getElementById('root')
 // Remove 300ms tap delay on mobile devices

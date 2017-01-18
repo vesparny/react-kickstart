@@ -12,12 +12,10 @@ See a [working demo](http://vesparny.github.io/react-kickstart/)
 
 ## Features
 * webpack + vanilla hot-module-replacement
-* Stateless functional components
-* styling with [aphrodite](https://github.com/Khan/aphrodite) and [tachyons](http://tachyons.io/)
+* styling with [styled-components](https://github.com/styled-components/styled-components)
 * basic routing setup with react-router (you most likely need routing in your app)
-* [babeljs](https://babeljs.io/)
-* unit tests ([ava](https://github.com/sindresorhus/ava) + [sinon](http://sinonjs.org/)) examples with both [shallow-rendering](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering) and [jsdom](https://github.com/tmpvar/jsdom)
-* code coverage with [nyc](https://github.com/bcoe/nyc)
+* unit tests ([jest](http://facebook.github.io/jest/)
+* ([flow](http://facebook.github.io/flow/) ready
 * development and production build
 
 ## Usage
@@ -29,7 +27,7 @@ git clone https://github.com/vesparny/react-kickstart.git
 
 **Install**
 ```
-npm install
+npm install (or yarn install)
 ```
 
 **Start the application in dev mode with hot-module-replacement**
@@ -55,11 +53,6 @@ npm run start
 **Lint with standard**
 ```
 npm run lint
-```
-
-**Generate code coverage report**
-```
-npm run test:cover
 ```
 
 ## Contributing
