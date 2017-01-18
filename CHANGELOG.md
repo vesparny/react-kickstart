@@ -1,3 +1,20 @@
+<a name="6.0.0"></a>
+# [6.0.0](https://github.com/vesparny/react-kickstart/compare/4.0.1...v6.0.0) (2017-01-18)
+
+
+### Bug Fixes
+
+* **tests:** add more tests ([c6f000b](https://github.com/vesparny/react-kickstart/commit/c6f000b))
+
+
+### Features
+
+* **app:** jest for testing ([04f5a7c](https://github.com/vesparny/react-kickstart/commit/04f5a7c))
+* **app:** React router 4 ([466a667](https://github.com/vesparny/react-kickstart/commit/466a667))
+* **lib:** Styled components ([cdb7dd6](https://github.com/vesparny/react-kickstart/commit/cdb7dd6))
+
+
+
 <a name="5.0.0"></a>
 # [5.0.0](https://github.com/vesparny/react-kickstart/compare/4.0.2...v5.0.0) (2016-07-05)
 

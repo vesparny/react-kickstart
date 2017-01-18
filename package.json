@@ -1,6 +1,6 @@
 {
   "name": "react-kickstart",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "just another react + webpack boilerplate.",
   "private": true,
   "author": "Alessandro Arnodo <alessandro@arnodo.net> (https://alessandro.arnodo.net)",
