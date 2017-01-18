@@ -14,8 +14,8 @@ See a [working demo](http://vesparny.github.io/react-kickstart/)
 * webpack + vanilla hot-module-replacement
 * styling with [styled-components](https://github.com/styled-components/styled-components)
 * basic routing setup with react-router (you most likely need routing in your app)
-* unit tests ([jest](http://facebook.github.io/jest/)
-* ([flow](http://facebook.github.io/flow/) ready
+* unit tests ([jest](http://facebook.github.io/jest/))
+* [flow](http://facebook.github.io/flow/) ready
 * development and production build
 
 ## Usage
