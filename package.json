@@ -30,6 +30,7 @@
   "standard": {
     "parser": "babel-eslint",
     "globals": [
+      "jest",
       "expect",
       "it",
       "test",

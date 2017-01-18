@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import BrowserRouter from 'react-router/BrowserRouter'
 
-import Root from '../Root'
+import Root from './Root'
 
 const renderComponent = (props = {}) => shallow(<Root />)
 
