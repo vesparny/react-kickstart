@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const baseConfig = require('./webpack.config.base')
 
 module.exports = baseConfig({
@@ -15,18 +16,13 @@ module.exports = baseConfig({
       inject: 'body',
       filename: 'index.html',
       minify: {
-        removeComments: true,
         collapseWhitespace: true,
-        removeRedundantAttributes: true,
-        useShortDoctype: true,
-        removeEmptyAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        keepClosingSlash: true,
-        minifyJS: true,
-        minifyCSS: true,
-        minifyURLs: true
+        minifyCSS: true
       }
     }),
+    new CopyWebpackPlugin([{
+      from: 'src/assets'
+    }]),
     new ExtractTextPlugin({
       filename: '[name].[hash].min.css',
       disable: false,
