@@ -23,7 +23,7 @@
     "build:clean": "rimraf build",
     "build": "npm run test && npm run lint && cross-env NODE_ENV=production webpack --config webpack.config.prod.js --color -p --progress",
     "gh-pages": "gh-pages --dist build",
-    "release": "npm run build && npm run bump && git push --follow-tags origin master && npm run gh-pages",
+    "release": "npm run test && npm run lint && npm run bump && npm run build && git push --follow-tags origin master && npm run gh-pages",
     "precommit": "lint-staged",
     "lint": "standard",
     "format": "prettier --write --single-quote 'src/**/*.js'",
