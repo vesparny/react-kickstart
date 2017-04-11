@@ -5,4 +5,4 @@ export default {
     blue: '#0074D9',
     grey: 'rgba(0,0,0,.4)'
   }
-}
+};
