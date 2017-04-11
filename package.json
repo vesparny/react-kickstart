@@ -26,7 +26,7 @@
     "release": "npm run build && npm run bump && git push --follow-tags origin master && npm run gh-pages",
     "precommit": "lint-staged",
     "lint": "standard",
-    "format": "prettier --write --single-quote 'src/**/*.js' && standard --fix",
+    "format": "prettier --write --single-quote 'src/**/*.js'",
     "flow": "flow"
   },
   "standard": {
@@ -43,6 +43,7 @@
     "linters": {
       "src/*/**/*.js": [
         "npm run format",
+        "npm run lint -- --fix",
         "git add"
       ]
     }
