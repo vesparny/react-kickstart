@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="6.1.1"></a>
+## [6.1.1](https://github.com/vesparny/react-kickstart/compare/v6.1.0...v6.1.1) (2017-04-11)
+
+
+### Bug Fixes
+
+* build ([8662125](https://github.com/vesparny/react-kickstart/commit/8662125))
+* lint ([314fb72](https://github.com/vesparny/react-kickstart/commit/314fb72))
+* lint ([22b5178](https://github.com/vesparny/react-kickstart/commit/22b5178))
+
+
+
 <a name="6.1.0"></a>
 # [6.1.0](https://github.com/vesparny/react-kickstart/compare/5.0.0...6.1.0) (2017-04-11)
 
