@@ -1,3 +1,30 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="6.1.0"></a>
+# [6.1.0](https://github.com/vesparny/react-kickstart/compare/5.0.0...6.1.0) (2017-04-11)
+
+
+### Bug Fixes
+
+* lint ([656769a](https://github.com/vesparny/react-kickstart/commit/656769a))
+* lint ([17f72c8](https://github.com/vesparny/react-kickstart/commit/17f72c8))
+* lint ([aa78e05](https://github.com/vesparny/react-kickstart/commit/aa78e05))
+* remove cov threshold ([4031af1](https://github.com/vesparny/react-kickstart/commit/4031af1))
+
+
+### Features
+
+* **app:** jest for testing ([04f5a7c](https://github.com/vesparny/react-kickstart/commit/04f5a7c))
+* **app:** React router 4 ([466a667](https://github.com/vesparny/react-kickstart/commit/466a667))
+* **app:** Webpack2 refactoring ([c625302](https://github.com/vesparny/react-kickstart/commit/c625302))
+* **lib:** rebuilding with glamorous BREAKING CHANGE: no more s-c ([8678275](https://github.com/vesparny/react-kickstart/commit/8678275))
+* **lib:** Styled components ([cdb7dd6](https://github.com/vesparny/react-kickstart/commit/cdb7dd6))
+* jest testing ([3478ea2](https://github.com/vesparny/react-kickstart/commit/3478ea2))
+
+
+
 <a name="6.0.0"></a>
 # [6.0.0](https://github.com/vesparny/react-kickstart/compare/4.0.1...v6.0.0) (2017-01-18)
 

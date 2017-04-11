@@ -1,6 +1,6 @@
 {
   "name": "react-kickstart",
-  "version": "6.0.0",
+  "version": "6.1.0",
   "description": "just another react + webpack boilerplate.",
   "private": true,
   "author": "Alessandro Arnodo <alessandro@arnodo.net> (https://alessandro.arnodo.net)",
@@ -50,7 +50,11 @@
   },
   "jest": {
     "testEnvironment": "jsdom",
-     "collectCoverageFrom" : ["**/*.{js}", "!**/node_modules/**", "!**/vendor/**"],
+    "collectCoverageFrom": [
+      "**/*.{js}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
