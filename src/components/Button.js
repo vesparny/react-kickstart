@@ -1,13 +1,14 @@
-import s from 'styled-components'
-import colors from '../colors'
+import glamorous from 'glamorous'
 
-const Button = s.button`
-  border: none
-  color: white
-  padding: 1em
-  border-radius: 3px
-  cursor: pointer
-  background-color: ${colors.blue}
-`
+const Button = glamorous.button(
+  {
+    border: 'none',
+    color: 'white',
+    padding: '1em',
+    borderRadius: 3,
+    cursor: 'pointer'
+  },
+  (p, t) => ({ backgroundColor: t.colors.blue })
+)
 
 export default Button

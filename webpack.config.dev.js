@@ -24,13 +24,12 @@ module.exports = baseconfig({
     })
   ],
   module: {
-    rules: [{
-      test: /\.css$/,
-      use: [
-        'style-loader',
-        'css-loader'
-      ]
-    }]
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
   },
   performance: {
     hints: false
