@@ -2,19 +2,18 @@
 **just another react + webpack boilerplate**
 
 [![Build Status](https://travis-ci.org/vesparny/react-kickstart.svg)](https://travis-ci.org/vesparny/react-kickstart)
-[![codecov.io](https://codecov.io/github/vesparny/react-kickstart/coverage.svg?branch=master)](https://codecov.io/github/vesparny/react-kickstart?branch=master)
 [![Dependency status](https://david-dm.org/vesparny/react-kickstart/status.svg)](https://david-dm.org/vesparny/react-kickstart "Dependency status")
 [![Dev dependency status](https://david-dm.org/vesparny/react-kickstart/dev-status.svg)](https://david-dm.org/vesparny/react-kickstart#info=devDependencies "Dev dependency status")
-
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 See a [working demo](http://vesparny.github.io/react-kickstart/)
 
 ## Features
 * webpack + vanilla hot-module-replacement
-* styling with [styled-components](https://github.com/styled-components/styled-components)
+* styling with [glamorous](https://github.com/paypal/glamorous)
+* prettier and standardjs
 * basic routing setup with react-router (you most likely need routing in your app)
-* unit tests ([jest](http://facebook.github.io/jest/))
+* unit tests ([jest](http://facebook.github.io/jest/) and [enzyme](http://airbnb.io/enzyme))
 * [flow](http://facebook.github.io/flow/) ready
 * development and production build
 

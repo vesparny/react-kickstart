@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Counter /> renders correctly 1`] = `
+.css-abd50l,
+[data-css-abd50l] {
+  color: ;
+}
+
+.css-1fmls8,
+[data-css-1fmls8] {
+  border: none;
+  color: white;
+  padding: 1em;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "colors": Object {
+        "green": "",
+      },
+    }
+  }
+>
+  <Counter
+    onIncrement={[Function]}
+  >
+    <glamorous(div)>
+      <div
+        className="css-abd50l"
+      >
+        <h1>
+          Count: 
+        </h1>
+        <p>
+          Click the button to increment the counter
+        </p>
+        <glamorous(button)
+          onClick={[Function]}
+        >
+          <button
+            className="css-1fmls8"
+            onClick={[Function]}
+          >
+            Increment
+          </button>
+        </glamorous(button)>
+      </div>
+    </glamorous(div)>
+  </Counter>
+</ThemeProvider>
+`;

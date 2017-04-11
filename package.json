@@ -18,10 +18,12 @@
     "test": "cross-env NODE_ENV=test jest --coverage",
     "dev": "node devServer",
     "start": "cross-env NODE_ENV=production node prodServer",
+    "bump": "standard-version",
     "prebuild": "npm run build:clean",
     "build:clean": "rimraf build",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js --color -p --progress",
+    "build": "npm run test && npm run format && cross-env NODE_ENV=production webpack --config webpack.config.prod.js --color -p --progress",
     "gh-pages": "gh-pages --dist build",
+    "release": "npm run build && npm run bump && git push --follow-tags origin master && npm run gh-pages",
     "precommit": "lint-staged",
     "lint": "standard",
     "format": "prettier --write --single-quote 'src/**/*.js' && standard --fix",
@@ -44,6 +46,24 @@
         "git add"
       ]
     }
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+     "collectCoverageFrom" : ["**/*.{js}", "!**/node_modules/**", "!**/vendor/**"],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "roots": [
+      "src"
+    ]
   },
   "dependencies": {
     "glamor": "^2.20.24",
@@ -69,6 +89,7 @@
     "cross-env": "^4.0.0",
     "css-loader": "^0.28.0",
     "enzyme": "^2.8.0",
+    "enzyme-to-json": "^1.5.0",
     "express": "^4.15.2",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
@@ -76,6 +97,7 @@
     "gh-pages": "^0.12.0",
     "html-webpack-plugin": "^2.28.0",
     "jest-cli": "^19.0.2",
+    "jest-glamor-react": "^1.2.0",
     "json-loader": "^0.5.4",
     "lodash": "^4.13.1",
     "prettier": "^0.22.0",

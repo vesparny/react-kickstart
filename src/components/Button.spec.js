@@ -1,14 +1,16 @@
 import React from 'react'
 import { shallow } from 'enzyme'
+import { matcher, serializer } from 'jest-glamor-react'
 import Button from './Button'
 
-const renderComponent = (p = {}) => shallow(<Button {...p} />)
+expect.addSnapshotSerializer(serializer)
+expect.extend(matcher)
 
-describe('<Counter />', () => {
-  it('should handle click events', () => {
-    const spy = jest.fn()
-    const renderedComponent = renderComponent({ onClick: spy })
-    renderedComponent.find('button').simulate('click')
-    expect(spy).toHaveBeenCalled()
+describe('<Button />', () => {
+  it('renders correctly', () => {
+    const wrapper = shallow(
+      <Button theme={{ colors: { blue: 'blue' } }}>hello</Button>
+    )
+    expect(wrapper).toMatchSnapshotWithGlamor()
   })
 })

@@ -1,12 +1,22 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
+import { matcher, serializer } from 'jest-glamor-react'
+import { ThemeProvider } from 'glamorous'
 import Counter from './Counter'
 
-const renderComponent = (p = {}) => shallow(<Counter {...p} />)
+expect.addSnapshotSerializer(serializer)
+expect.extend(matcher)
 
 describe('<Counter />', () => {
-  it('should handle click events', () => {
-    const renderedComponent = renderComponent({ count: 1 })
-    expect(renderedComponent.find('h1').text()).toEqual('Count: 1')
+  const onIncrement = jest.fn()
+  it('renders correctly', () => {
+    const wrapper = mount(
+      <ThemeProvider theme={{ colors: { green: '' } }}>
+        <Counter onIncrement={onIncrement} />
+      </ThemeProvider>
+    )
+    expect(wrapper).toMatchSnapshotWithGlamor()
+    wrapper.find('button').simulate('click')
+    expect(onIncrement).toHaveBeenCalled()
   })
 })

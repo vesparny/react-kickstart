@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> renders correctly 1`] = `
+.css-ohh20q,
+[data-css-ohh20q] {
+  border: none;
+  color: white;
+  padding: 1em;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: blue;
+}
+
+<button
+  className="css-ohh20q"
+>
+  hello
+</button>
+`;
