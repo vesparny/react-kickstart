@@ -1,4 +1,4 @@
-import glamorous from 'glamorous'
+import glamorous from 'glamorous';
 
 const Button = glamorous.button(
   {
@@ -9,6 +9,6 @@ const Button = glamorous.button(
     cursor: 'pointer'
   },
   (p, t) => ({ backgroundColor: t.colors.blue })
-)
+);
 
-export default Button
+export default Button;
