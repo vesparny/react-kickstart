@@ -25,8 +25,7 @@
     "gh-pages": "gh-pages --dist build",
     "release": "npm run test && npm run lint && npm run bump && npm run build && git push --follow-tags origin master && npm run gh-pages",
     "precommit": "lint-staged",
-    "lint": "standard",
-    "format": "prettier --write --single-quote 'src/**/*.js'"
+    "lint": "standard"
   },
   "standard": {
     "parser": "babel-eslint",
@@ -39,13 +38,11 @@
     ]
   },
   "lint-staged": {
-    "linters": {
-      "src/*/**/*.js": [
-        "npm run format",
-        "npm run lint -- --fix",
-        "git add ."
-      ]
-    }
+    "*.js": [
+      "prettier --write --semi false --single-quote",
+      "standard --fix",
+      "git add"
+    ]
   },
   "jest": {
     "testEnvironment": "jsdom",

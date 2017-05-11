@@ -32,7 +32,7 @@ const Ul = glamorous(Box)({
 class Home extends Component {
   state = {
     counter: 0
-  };
+  }
   increment () {
     this.setState((prevState, props) => {
       const count = (prevState.counter += 1)
