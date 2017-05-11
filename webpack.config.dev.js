@@ -6,7 +6,7 @@ const baseconfig = require('./webpack.config.base')
 module.exports = baseconfig({
   devtool: 'cheap-module-eval-source-map',
   entry: [
-    'webpack-dev-server/client',
+    'webpack-dev-server/client?http://localhost:3000/',
     'webpack/hot/dev-server',
     path.join(__dirname, 'src/main.js')
   ],
