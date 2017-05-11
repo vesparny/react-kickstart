@@ -14,7 +14,6 @@ See a [working demo](http://vesparny.github.io/react-kickstart/)
 * prettier and standardjs
 * basic routing setup with react-router (you most likely need routing in your app)
 * unit tests ([jest](http://facebook.github.io/jest/) and [enzyme](http://airbnb.io/enzyme))
-* [flow](http://facebook.github.io/flow/) ready
 * development and production build
 
 ## Usage

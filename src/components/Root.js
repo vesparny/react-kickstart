@@ -1,4 +1,3 @@
-// @flow
 import React from 'react'
 import { ThemeProvider } from 'glamorous'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
