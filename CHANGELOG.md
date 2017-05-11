@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="6.1.4"></a>
+## [6.1.4](https://github.com/vesparny/react-kickstart/compare/v6.1.3...v6.1.4) (2017-05-11)
+
+
+### Bug Fixes
+
+* hmr ([736fb9d](https://github.com/vesparny/react-kickstart/commit/736fb9d))
+* lint ([6748a57](https://github.com/vesparny/react-kickstart/commit/6748a57))
+* remove flow ([d1b7c53](https://github.com/vesparny/react-kickstart/commit/d1b7c53))
+* travis build ([5115e84](https://github.com/vesparny/react-kickstart/commit/5115e84))
+
+
+
 <a name="6.1.3"></a>
 ## [6.1.3](https://github.com/vesparny/react-kickstart/compare/v6.1.2...v6.1.3) (2017-04-11)
 
