@@ -48,6 +48,20 @@ npm run build
 npm run start
 ```
 
+**RUN in production as a docker container**
+
+**Create docker image**
+
+```bash
+docker build -t react-kickstart .
+```
+
+**RUN using docker-compose.yml**
+
+```bash
+docker-compose up -d
+```
+
 **Lint with standard**
 ```
 npm run lint

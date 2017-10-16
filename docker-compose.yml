@@ -1,0 +1,6 @@
+version: '2'
+services:
+  react-kickstart:
+    image: react-kickstart
+    ports:
+      - "3000:3000"
