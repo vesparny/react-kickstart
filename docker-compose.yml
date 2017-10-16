@@ -1,6 +1,6 @@
 version: '2'
 services:
-  react-kickstarter:
-    image: react-kickstarter
+  react-kickstart:
+    image: react-kickstart
     ports:
       - "3000:3000"

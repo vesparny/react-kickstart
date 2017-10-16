@@ -53,7 +53,7 @@ npm run start
 **Create docker image**
 
 ```bash
-docker build -t react-kickstarter .
+docker build -t react-kickstart .
 ```
 
 **RUN using docker-compose.yml**
