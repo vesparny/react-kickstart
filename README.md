@@ -1,5 +1,10 @@
 # react-kickstart
-**just another react + webpack boilerplate**
+
+> just another react + webpack boilerplate
+
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/aF8QWaPs78PSySxWPHXXNThZ/vesparny/react-kickstart'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/aF8QWaPs78PSySxWPHXXNThZ/vesparny/react-kickstart.svg' />
+</a>
 
 [![Build Status](https://travis-ci.org/vesparny/react-kickstart.svg)](https://travis-ci.org/vesparny/react-kickstart)
 [![Dependency status](https://david-dm.org/vesparny/react-kickstart/status.svg)](https://david-dm.org/vesparny/react-kickstart "Dependency status")
